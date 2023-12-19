@@ -10,25 +10,27 @@ const SectionWrapper = (Component, idName) =>
     function HOC() {
 
         return (
-            <>
-                <Navbar/>
-                {/* <hr className="h-px mb-10 mt-2 bg-black-100 z-21 border-3 "/> */}
 
-                <motion.section
+            <div className="[@media(max-width:767px)]:scrollbar-hide">
+                <Navbar/>
+
+                {/* <motion.section
                     variants={staggerContainer()}
                     initial='hidden'
                     whileInView='show'
                     viewport={{ once: true, amount: 0.25 }}
                     className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
-                >
+                    >
                     <span className='hash-span' id={idName}>
                         &nbsp;
-                    </span>
+                    </span> */}
 
-                    <Component />
+                <div className={`${styles.padding} relative z-0`}>
+                    <Component/>
+                </div>
                     
-                </motion.section>
-            </>
+                {/* </motion.section> */}
+            </div>
         )
     }
 

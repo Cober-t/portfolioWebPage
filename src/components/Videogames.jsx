@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants/constants";
 
+
 const FeedbackCard = ({index, testimonial, name,
 	designation, company, image}) => (
 
@@ -47,7 +48,7 @@ const Videogames = () => {
 
 	return (
 
-		<div className={`mt-12 bg-black-100 rounded-[20px]`}>
+		<div className="mt-12 bg-black-100 no-scrollbar rounded-[20px]">
 
 			<div className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}>
 

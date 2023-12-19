@@ -31,19 +31,60 @@ import {
 } from "../assets";
 
 
-import { useMatch, useResolvedPath, Link } from 'react-router-dom';
+import { useMatch, useLocation, useResolvedPath, Link } from 'react-router-dom';
 export function CustomLink({ to, uniqueKey, children, ...props }) {
     
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
     
     return (
-        <li key={uniqueKey} className={isActive ? "active" : ""}>
+        <li key={uniqueKey} className={isActive ? "active list-none" : "list-none"}>
             <Link to={to} {...props} onClick={window.scroll(0, 0)}>
                 {children}
             </Link>
         </li>
     )
+}
+
+export function PrintIcons({identifier, object}) {
+
+    const location = useLocation()    
+
+    if ( identifier != location.pathname ) {
+        return (
+            <CustomLink to={`${object.id}`} key={object.id + "IconNavbar"}
+                onClick={() => { window.scroll(0, 0); setActive("hidden"); }}
+            >
+                <img src={object.icon} alt="logo" className='w-6 h-6 object-contain mt-1' />
+            </CustomLink>
+        )
+    }
+}
+
+export function DrawCurrentIcon({identifier, object}) {
+
+    const location = useLocation()
+
+    if ( identifier === location.pathname ) 
+        return (
+            <CustomLink to={`${object.id}`} key={object.id + "CurrentIconNavbar"}
+                onClick={() => { window.scroll(0, 0); setActive("hidden"); }}
+            >
+                <img src={object.icon} alt="logo" className='w-6 h-6 object-contain mt-1' />
+            </CustomLink>
+        )
+}
+
+export function DrawNameSection({identifier, object}) {
+
+    const location = useLocation()
+
+    if ( identifier == location.pathname)
+        return (
+            <div className={`${object.color} ps-10 sm:text-[32px] md:text-[32px] uppercase tracking-wider text-black-100`}> 
+                {object.title}
+            </div>
+        )
 }
 
 const style= "ps-10 sm:text-[56px] text-[48px] uppercase tracking-wider text-black-100 "
@@ -52,30 +93,35 @@ export const navLinks = [
         id: "/music",
         title: "Music",
         icon: musicIcon,
+        color: "text-musicColor",
         style: style + "hover:text-musicColor",
     },
     {
         id: "/illustration",
         title: "Illustration",
         icon: illustrationIcon,
+        color: "text-illustrationColor",
         style: style + "hover:text-illustrationColor",
     },
     {
         id: "/videogames",
         title: "Videogames",
         icon: videogameIcon,
+        color: "text-videogamesColor",
         style: style + "hover:text-videogamesColor",
     },
     {
         id: "/other",
         title: "Other",
         icon: otherIcon,
+        color: "text-otherColor",
         style: style + "hover:text-otherColor",
     },
     {
         id: "/art3D",
         title: "Art 3D",
         icon: art3dIcon,
+        color: "text-art3dColor",
         style: style + "hover:text-art3dColor",
     },
 ];

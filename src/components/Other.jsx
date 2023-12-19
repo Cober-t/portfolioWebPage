@@ -78,6 +78,7 @@ const Other = () => {
 					))}
 				</VerticalTimeline>
 			</div>
+			
 		</>
 	)
 }

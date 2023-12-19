@@ -1,4 +1,4 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
+import { EarthCanvas, BallCanvas, ComputersCanvas } from './canvas';
 import Home from './Home';
 import Hero from './Hero';
 import Navbar from './Navbar';
@@ -8,6 +8,7 @@ import Other from './Other';
 import Art3D from './Art3D';
 import Videogames from './Videogames';
 import Contact from './Contact';
+import ScrollToTop from './ScrollToTop';
 
 export {
   Home,
@@ -21,6 +22,6 @@ export {
   Contact,
   EarthCanvas, 
   BallCanvas, 
-  ComputersCanvas, 
-  StarsCanvas
+  ComputersCanvas,
+  ScrollToTop 
 }

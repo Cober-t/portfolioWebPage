@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Home, Illustration, Music, Other, Videogames, Art3D } from './components';
+import { Home, Illustration, Music, Other, Videogames, Art3D, ScrollToTop } from './components';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <Route path="/other" element={<Other />} />
                 <Route path="/art3D" element={<Art3D />} />
             </Routes>
-			
+
         </BrowserRouter>
     </React.StrictMode>,
 )

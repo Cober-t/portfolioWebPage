@@ -81,7 +81,7 @@ const Contact = () => {
 							name="name"
 							value={form.name}
 							onChange={handleChange}
-							placeholder="wWhat's your name?"
+							placeholder="What's your name?"
 							className="bg-tertiary py-4 px-6 placeholder:text-seconday
 							text-white reounded-lg outlined-none border-none font-medium"
 						/>
@@ -136,4 +136,4 @@ const Contact = () => {
 	)
 }
 
-export default SectionWrapper(Contact, "contact")
+export default Contact
