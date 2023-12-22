@@ -81,13 +81,13 @@ export function DrawNameSection({identifier, object}) {
 
     if ( identifier == location.pathname)
         return (
-            <div className={`${object.color} ps-10 sm:text-[32px] md:text-[32px] uppercase tracking-wider text-black-100`}> 
+            <div className={`${object.color} absolute left-1/2 -translate-x-1/2 xs:text-[32px] sm:text-[32px] md:text-[32px] uppercase tracking-wider text-black-100`}> 
                 {object.title}
             </div>
         )
 }
 
-const style= "ps-10 sm:text-[56px] text-[48px] uppercase tracking-wider text-black-100 "
+const style= "ps-10 xs:text-[48px] text-[48px] uppercase text-black-100 "
 export const navLinks = [
     {
         id: "/music",
@@ -121,8 +121,8 @@ export const navLinks = [
         id: "/art3D",
         title: "Art 3D",
         icon: art3dIcon,
-        color: "text-art3dColor",
-        style: style + "hover:text-art3dColor",
+        color: "text-art3DColor",
+        style: style + "hover:text-art3DColor",
     },
 ];
 

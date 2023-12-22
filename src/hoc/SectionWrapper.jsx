@@ -25,7 +25,7 @@ const SectionWrapper = (Component, idName) =>
                         &nbsp;
                     </span> */}
 
-                <div className={`${styles.padding} relative z-0`}>
+                <div className={`${styles.padding} relative z-0 bg-backgroundColor`}>
                     <Component/>
                 </div>
                     

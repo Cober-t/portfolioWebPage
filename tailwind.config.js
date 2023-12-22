@@ -19,8 +19,8 @@ module.exports = {
 				orange: "#EF821E",
 				backgroundColor: "rgba(217, 217, 217, 1)",
 				contactColor: "rgba(49, 49, 49, 1)",
-				musicColor: "rgba(91, 208, 72, 0.75)",
-				art3dColor: "rgba(239, 130, 30, 0.8)",
+				musicColor: "rgba(11, 156, 49, 0.75)",
+				art3DColor: "rgba(239, 130, 30, 0.75)",
 				videogamesColor: "rgba(97, 31, 129, 0.75)",
 				illustrationColor: "rgba(218, 35, 35, 0.75)",
 				otherColor: "rgba(110, 110, 110, 0.75)"
@@ -54,7 +54,4 @@ module.exports = {
 			// },
 		},
 	},
-	plugins: [
-        require("tailwind-scrollbar-hide")
-	],
 };
