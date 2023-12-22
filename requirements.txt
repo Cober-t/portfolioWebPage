@@ -17,7 +17,7 @@ PAGINA WEB
 [ ] Create 3D Art Section
     [ ] Create galery, progress bar and backgrounds
     [ ] Visual feedback and animations
-[ ] Crate music section
+[ ] Crate Music section
     [ ] Make unfold songs, scroll play and stop buttons
     [ ] Visual feedback and animations
 [ ] Create Videogames Sections
@@ -28,7 +28,7 @@ PAGINA WEB
     [ ] Learn to reorder items
     [ ] Gifs, comic, ilustration and animation sections
     [ ] Visual feedback and animations
-[ ] Create other page
+[ ] Create Other page
     [ ] Create article page galery with tags
     [ ] Search and find articles
     [ ] Create article page and find a way to do layout

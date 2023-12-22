@@ -21,6 +21,8 @@ const Home = () => {
 				</CustomLink>
 			))}
 
+			<div className='py-[100px]'/>
+
 			<div className="relative z-0 bg-contactColor">
 				<Contact />
 			</div>

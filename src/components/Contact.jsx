@@ -14,7 +14,6 @@ const Contact = () => {
 	const [form, setForm] = useState({
 		name: '',
 		email: '',
-		message: '',
 	})
 	const [loading, setLoading] = useState(false)
 
@@ -31,23 +30,22 @@ const Contact = () => {
 
 		emailjs
 			.send(
-				// import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-				// import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+				"service_fb2vxve",
+				"template_oghs4rs",
 				{
 					from_name: form.name,
 					to_name: "Jorge",
 					from_email: form.email,
 					to_email: "jorgetejadolopez@gmail.com",
-					message: form.message,
 				},
-				// import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+				"HoUaVJll9lhvzBmRn"
 			)
 			.then(
 				() => {
 					setLoading(false);
 					alert("Thank you. I will get back to you as soon as possible.");
 
-					setForm({ name: "", email: "", message: "" })
+					setForm({ name: "", email: ""})
 				},
 				(error) => {
 					setLoading(false);
@@ -60,76 +58,94 @@ const Contact = () => {
 
 	return (
 
-		<div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+		<div className={`${styles.paddingX} ${styles.paddingY} xl:mt-12 xl:flex-row flex-col flex gap-10 overflow-hidden`}>
 
-			<motion.div
-				variants={slideIn('left', "tween", 0.2, 1)}
-				className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+			<h3 className={`${styles.sectionHeadText} mt-[150px] font-homeSections font-regular`}>SUBSCRIBE TO STAY TUNE</h3>
+
+			<form
+				ref={formRef}
+				onSubmit={handleSubmit}
+				className="mb-10 text-secondary rounded-lg text-[18px]"
 			>
-				<p className={styles.sectionSubText}>Get in touch</p>
-				<h3 className={styles.sectionHeadText}>Contact.</h3>
-
-				<form
-					ref={formRef}
-					onSubmit={handleSubmit}
-					className="mt-12 flex flex-col gap-8"
-				>
-					<label className="flex flex-col">
-						<span className="text-white font-medium mb-4">Your name</span>
+				<label className="flex flex-col mb-10 ml-10">
+					<div className="h-[3rem] w-0.5 bg-secondary">
 						<input 
 							type="text" 
 							name="name"
 							value={form.name}
 							onChange={handleChange}
-							placeholder="What's your name?"
-							className="bg-tertiary py-4 px-6 placeholder:text-seconday
-							text-white reounded-lg outlined-none border-none font-medium"
+							placeholder="YOUR NAME..."
+							className="py-4 px-6 placeholder:text-secondary bg-transparent font-homeSections font-regular outline-none"
 						/>
-					</label>
+					</div>
+				</label>
 
-					<label className='flex flex-col'>
-						<span className='text-white font-medium mb-4'>Your email</span>
+				<label className='flex flex-col ml-10'>
+					<div className="absolute h-[3rem] w-0.5 bg-secondary">
 						<input
 							type='email'
 							name='email'
 							value={form.email}
 							onChange={handleChange}
-							placeholder="What's your web address?"
-							className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+							placeholder="YOUR EMAIL..."
+							className='py-4 px-6 placeholder:text-secondary bg-transparent font-homeSections font-regular outline-none'
 						/>
-					</label>
+					</div>
+				</label>
 
-					<label className='flex flex-col'>
-						<span className='text-white font-medium mb-4'>Put here your message</span>
-						<textarea
-							rows={7}
-							name='message'
-							value={form.message}
-							onChange={handleChange}
-							placeholder='What do you want to say?'
-							className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-						/>
-					</label>
-
+				<div className="mt-[100px] flex flex-col items-center">
 					<button
 						type="submit"
-						className="bg-tertiary py-3 px-8 outline-none w-fit
-						text-white font-bold shadow-md shadow-primary rounded-xl"
+						className="py-3 px-8 bg-primary opacity-45 hover:opacity-85
+						outline-none w-fit text-black-100 font-homeSections font-medium rounded-xl"
 					>
 						{loading ? 'Sending...' : 'Send'}
 					</button>
+				</div>
 
-				</form>
+			</form>
+			
+			<h3 className={`${styles.sectionHeadText} mt-[400px] font-homeSections font-regular`}>OR JOIN MY TELEGRAM CHANNEL</h3>
+			<div className="flex flex-col items-center mb-[400px]">
+				<button 
+					type="submit" 
+					className="bg-blue-600 hover:bg-blue-700 h-16 w-16 rounded-full"
+					>
+				</button>
+			</div>
 
-			</motion.div>
+			<div className="py-[50px]"/>
 
-			{/* <motion.div
-				variants={slideIn('right', 'tween', 0.2, 1)}
-				className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-			>
-				<EarthCanvas/>
+			<div className="flex justify-evenly">
+				<div className="grid grid-cols-1">
+					<a href="https://google.com" target="_blank" className="bg-red-600 hover:bg-red-700 h-8 w-8 rounded-full"/>
+					{/* <p className="font-homeSections font-regular">
+						Youtube
+					</p> */}
+				</div>
 
-			</motion.div> */}
+				<div className="grid grid-cols-1">
+					<a href="https://google.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 h-8 w-8 rounded-full"/>
+					{/* <p className="font-homeSections font-regular">
+						Twitter
+					</p> */}
+				</div>
+
+				<div className="grid grid-cols-1">
+					<a href="https://google.com" target="_blank" className="bg-purple-600 hover:bg-purple-700 h-8 w-8 rounded-full"/>
+					{/* <p className="font-homeSections font-regular">
+						Instagram
+					</p> */}
+				</div>
+
+				<div className="grid grid-cols-1">
+					<a href="https://google.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 h-8 w-8 rounded-full"/>
+					{/* <p className="font-homeSections font-regular">
+						TikTok
+					</p> */}
+				</div>
+
+			</div>
 
 		</div>
 
