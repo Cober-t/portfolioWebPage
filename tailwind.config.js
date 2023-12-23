@@ -27,6 +27,9 @@ module.exports = {
 				illustrationColor: "rgba(218, 35, 35, 0.75)",
 				otherColor: "rgba(110, 110, 110, 0.75)"
 			},
+			cursor: {
+				'fancy': 'url(hand.cur), pointer',
+			},
 			boxShadow: {
 				card: "0px 35px 120px -15px #211e35",
 			},
@@ -42,7 +45,7 @@ module.exports = {
 			fontFamily: {
 				homeSections: 'Montserrat, sans-serif',
 				titleSections: 'Inter, sans-serif',
-				text: 'Reckless Neue, sans-serif',
+				bodySection: 'Reckless Neue, sans-serif',
 			},
 			fontWeight: {
 				thin: '100',

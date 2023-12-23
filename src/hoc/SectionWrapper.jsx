@@ -12,7 +12,7 @@ const SectionWrapper = (Component, idName) =>
 
         return (
 
-            <div className="scrollbar-none">
+            <div>
                 <Navbar/>
 
                 {/* <motion.section

@@ -8,7 +8,7 @@ const Navbar = () => {
 
         return (
 
-            <nav className={`${active} xs:px-10 sm:px-10 xs:py-9 sm:py-9 md:py-9 z-20 flex w-full items-center bg-backgroundColor border-b-2 border-black-100`}>
+            <nav className={`${active} sticky top-0 py-9 z-20 flex w-full items-center bg-backgroundColor border-b-2 border-black-100`}>
 
                 {/*=========  MAIN ICONS  ==========*/}
                 <div className='flex gap-6 absolute left-0 px-10'>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 </div>
 
                 {/*=======  VERTICAL LINE 1  =======*/}
-                <div className="absolute left-[9rem] xs:h-[5rem] sm:h-[5rem] h-[4rem] w-0.5 bg-black-100"/>
+                <div className="absolute left-[9rem] h-full w-0.5 bg-black-100"/>
 
                 {/*=====  NAME CURRENT SECTION  ====*/}
                 <div className='absolute left-1/2 -translate-x-1/2 md:-translate-x-2/3'>
@@ -34,7 +34,7 @@ const Navbar = () => {
                 </div>
 
                 {/*=======  VERTICAL LINE 2  =======*/}
-                <div className="absolute right-[9rem] md:right-[13rem] xs:h-[5rem] sm:h-[5rem] h-[4rem] w-0.5 bg-black-100"/>
+                <div className="absolute right-[9rem] md:right-[13rem] h-full w-0.5 bg-black-100"/>
 
                 {/*========  SECTION ICONS  ========*/}
                 <div className='md:flex absolute right-0 px-10 gap-4 gap-y-1 xs:grid xs:grid-cols-2'>

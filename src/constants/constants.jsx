@@ -4,6 +4,7 @@ import {
     videogameIcon,
     art3dIcon,
     otherIcon,
+    testSong,
     mobile,
     backend,
     creator,
@@ -145,58 +146,92 @@ const services = [
     },
 ];
 
-const technologies = [
+const musicList = [
     {
         name: "HTML 5",
         icon: html,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
     },
     {
         name: "CSS 3",
         icon: css,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum"
     },
     {
         name: "JavaScript",
         icon: javascript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
     },
     {
         name: "TypeScript",
         icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
     },
     {
         name: "React JS",
         icon: reactjs,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "Redux Toolkit",
         icon: redux,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "Tailwind CSS",
         icon: tailwind,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "Node JS",
         icon: nodejs,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "MongoDB",
         icon: mongodb,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "Three JS",
         icon: threejs,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "git",
         icon: git,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "figma",
         icon: figma,
+        path: testSong,
+        text: "loren ipstum",
     },
     {
         name: "docker",
         icon: docker,
+        path: testSong,
+        text: "loren ipstum",
     },
 ];
 
@@ -348,4 +383,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, musicList, experiences, testimonials, projects };

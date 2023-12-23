@@ -1,5 +1,7 @@
 import logo from "./icons/logo.svg";
 import musicIcon from "./icons/sectionMusic.svg";
+import musicPlay from "./icons/musicPlay.svg";
+import musicPause from "./icons/musicPause.svg";
 import otherIcon from "./icons/sectionOthers.svg";
 import videogameIcon from "./icons/sectionVideogames.svg";
 import illustrationIcon from "./icons/sectionIllustration.svg";
@@ -35,13 +37,19 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import testSong from "./music/testSong.mp3"
+
 export {
   logo,
   musicIcon,
+  musicPlay,
+  musicPause,
   illustrationIcon,
   videogameIcon,
   otherIcon,
   art3dIcon,
+  testSong,
+  
   backend,
   creator,
   mobile,
