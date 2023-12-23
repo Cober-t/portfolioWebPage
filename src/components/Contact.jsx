@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 import { styles } from "../styles"
-import { EarthCanvas } from './canvas'
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
 
@@ -58,9 +57,9 @@ const Contact = () => {
 
 	return (
 
-		<div className={`${styles.paddingX} ${styles.paddingY} xl:mt-12 xl:flex-row flex-col flex gap-10 overflow-hidden`}>
+		<div className={`${styles.paddingX} ${styles.paddingY} xl:mt-12 flex flex-col gap-10 overflow-hidden`}>
 
-			<h3 className={`${styles.sectionHeadText} mt-[150px] font-homeSections font-regular`}>SUBSCRIBE TO STAY TUNE</h3>
+			<h3 className={`${styles.sectionHeadText} mt-[150px] font-homeSections font-regular flex flex-col items-center`}>SUBSCRIBE TO STAY TUNE</h3>
 
 			<form
 				ref={formRef}
@@ -105,8 +104,8 @@ const Contact = () => {
 
 			</form>
 			
-			<h3 className={`${styles.sectionHeadText} mt-[400px] font-homeSections font-regular`}>OR JOIN MY TELEGRAM CHANNEL</h3>
-			<div className="flex flex-col items-center mb-[400px]">
+			<h3 className={`${styles.sectionHeadText} mt-[300px] mb-[50px] flex flex-col items-center font-homeSections font-regular`}>OR JOIN MY TELEGRAM CHANNEL</h3>
+			<div className="flex flex-col items-center mb-[300px]">
 				<button 
 					type="submit" 
 					className="bg-blue-600 hover:bg-blue-700 h-16 w-16 rounded-full"
@@ -114,37 +113,11 @@ const Contact = () => {
 				</button>
 			</div>
 
-			<div className="py-[50px]"/>
-
-			<div className="flex justify-evenly">
-				<div className="grid grid-cols-1">
-					<a href="https://google.com" target="_blank" className="bg-red-600 hover:bg-red-700 h-8 w-8 rounded-full"/>
-					{/* <p className="font-homeSections font-regular">
-						Youtube
-					</p> */}
-				</div>
-
-				<div className="grid grid-cols-1">
-					<a href="https://google.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 h-8 w-8 rounded-full"/>
-					{/* <p className="font-homeSections font-regular">
-						Twitter
-					</p> */}
-				</div>
-
-				<div className="grid grid-cols-1">
-					<a href="https://google.com" target="_blank" className="bg-purple-600 hover:bg-purple-700 h-8 w-8 rounded-full"/>
-					{/* <p className="font-homeSections font-regular">
-						Instagram
-					</p> */}
-				</div>
-
-				<div className="grid grid-cols-1">
-					<a href="https://google.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 h-8 w-8 rounded-full"/>
-					{/* <p className="font-homeSections font-regular">
-						TikTok
-					</p> */}
-				</div>
-
+			<div className="flex flex-row justify-evenly">
+				<a href="https://google.com" target="_blank" className="bg-red-600 hover:bg-red-700 h-8 w-8 rounded-full"/>
+				<a href="https://google.com" target="_blank" className="bg-blue-600 hover:bg-blue-700 h-8 w-8 rounded-full"/>
+				<a href="https://google.com" target="_blank" className="bg-purple-600 hover:bg-purple-700 h-8 w-8 rounded-full"/>
+				<a href="https://google.com" target="_blank" className="bg-amber-600 hover:bg-amber-700 h-8 w-8 rounded-full"/>
 			</div>
 
 		</div>

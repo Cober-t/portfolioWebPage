@@ -4,7 +4,10 @@ npm install -D tailwindcss
 npx tailwindcss init
 
 npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-parallax-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom
-npm install tailwind-scrollbar-hide
+npm install --save-dev tailwind-scrollbar
+npm install --legacy-peer-deps eslint-plugin-react-hooks
+npm install react-dnd react-dnd-html5-backend
+
 
 # MILESTONES
 ======================

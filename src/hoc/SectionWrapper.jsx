@@ -5,13 +5,14 @@ import { staggerContainer } from "../utils/motion";
 import { Navbar } from "../components";
 import { navLinks } from "../constants/constants";
 
+
 const SectionWrapper = (Component, idName) =>
 
     function HOC() {
 
         return (
 
-            <div className="[@media(max-width:767px)]:scrollbar-hide">
+            <div className="scrollbar-none">
                 <Navbar/>
 
                 {/* <motion.section
@@ -25,7 +26,7 @@ const SectionWrapper = (Component, idName) =>
                         &nbsp;
                     </span> */}
 
-                <div className={`${styles.padding} relative z-0 bg-backgroundColor`}>
+                <div className={`relative z-0 bg-backgroundColor`}>
                     <Component/>
                 </div>
                     

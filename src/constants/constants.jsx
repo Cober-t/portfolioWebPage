@@ -81,7 +81,7 @@ export function DrawNameSection({identifier, object}) {
 
     if ( identifier == location.pathname)
         return (
-            <div className={`${object.color} absolute left-1/2 -translate-x-1/2 xs:text-[32px] sm:text-[32px] md:text-[32px] uppercase tracking-wider text-black-100`}> 
+            <div className={`${object.color} xs:text-[32px] sm:text-[32px] md:text-[32px] uppercase tracking-wider text-black-100`}> 
                 {object.title}
             </div>
         )

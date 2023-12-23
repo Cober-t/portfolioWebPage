@@ -1,15 +1,20 @@
-import { BallCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { technologies } from "../constants/constants"
+import { styles } from "../styles"
+
+
+
 
 const Music = () => {
 
 	return (
-
-		<div className="flex flex-row flex-wrap justify-center gap-10">
+		
+		<div className="flex flex-col w-full h-full">
 			{technologies.map((technology) => (
-				<div className="w-28 h-28" key={technology.name}>
-					{/* <BallCanvas icon={technology.icon}/> */}
+				<div 
+				key={technology.name}
+				className={`${styles.paddingX} h-[65px] grid grid-cols-1 justify-items-end items-center font-homeSections font-medium uppercase border-black-100 border-b text-black-100`}>
+						{technology.name}
 				</div>
 			))}
 		</div>

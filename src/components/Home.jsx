@@ -3,12 +3,12 @@ import { navLinks, CustomLink } from '../constants/constants';
 import { styles } from '../styles';
 import { useState } from 'react';
 
-
 const Home = () => {
+
 
 	return (
 
-		<div className="relative z-0 bg-backgroundColor overflow-y-scroll no-scrollbar">
+		<div className="relative z-0 bg-backgroundColor">
 
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 				<Hero />
@@ -26,9 +26,7 @@ const Home = () => {
 			<div className="relative z-0 bg-contactColor">
 				<Contact />
 			</div>
-
 		</div>
-		
 	)
 }
 

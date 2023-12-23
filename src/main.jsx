@@ -2,14 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Home, Illustration, Music, Other, Videogames, Art3D, ScrollToTop } from './components';
-
+import { Home, Illustration, Music, Other, Videogames, Art3D } from './components';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-    <React.StrictMode>
+    <React.StrictMode>        
 		<BrowserRouter>
-            
+
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/illustration" element={<Illustration />}/>
