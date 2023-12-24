@@ -1,72 +1,69 @@
 import React, { useEffect, useState } from "react"
-
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
-import { illutrationList } from "../constants/constants"
+import { illutrationList, visible, hidden, animationFilter, comicFilter, photographFilter, illustrationFilter } from "../constants/constants"
 
-const visible = "visible"
-const hidden = "invisible"
 
-const ArtItem = ({item, isVisible, ...props}) => {
-	
-    if (isVisible == visible) {
+const ArtItem = ({item, filters, ...props}) => {
 
-		return ( 
-			<img src={item.icon}
-				onClick={()=> {console.log(item.title)}}
-			/>
-		)
-	}
+	return (
+		<img src={item.icon}
+			onClick={()=> {console.log(item.title)}}
+			props
+		/>
+	)
 }
 
 const Illustration = () => {
-
-	const [animation, setAnimationFilter] = useState(visible)
-	const [photograph, setPhotographFilter] = useState(visible)
-	const [illustration, setIllustrationFilter] = useState(visible)
-	const [comic, setComicFilter] = useState(visible)
-
-	const setOpacity = (value) => {
-		return value == hidden ? "opacity-35" : "opacity-75"
+	
+	const [filterDict, setFiltersDict] = useState([
+		{ tag: animationFilter,    value: visible, color: "text-amber-600"},
+		{ tag: comicFilter, 	   value: visible, color: "text-red-500"},
+		{ tag: photographFilter,   value: visible, color: "text-blue-500"},
+		{ tag: illustrationFilter, value: visible, color: "text-green-700"},
+	])
+	
+	const setOpacity = (index) => {
+		return filterDict[index].value == visible ? "opacity-75" : "opacity-35"
 	}
 
-	const disableAnimations = (()=> { setAnimationFilter(animation == visible ? hidden : visible) })
-	const disablePhotographs = (()=> { setPhotographFilter(photograph == visible ? hidden : visible) })
-	const disableIllustrations = (()=> { setIllustrationFilter(illustration == visible ? hidden : visible) })
-	const disableComics = (()=> { setComicFilter(comic == visible ? hidden : visible) })
+	const disableFilter = (filter, index) => { 
 
+		setFiltersDict( 
+			[...filterDict , 
+			filterDict[index].value = filter.value == visible ? hidden : visible ] 
+		)
+		setFiltersDict([...filterDict])
+	}
+	
 	return (
 		<div className="overflow-y-scroll no-scrollbar">
 
-			<div className={`${styles.paddingX} ${styles.paddingY} w-full justify-evenly grid xs:grid-cols-2 sm:grid-cols-4 items-center bg-backgroundColor`}> 
-				<button
-					type="button" onClick={ disableAnimations }
-					className={`text-purple-500 hover:opacity-75 ${setOpacity(animation)} text-md font-medium ${styles.textTitle} uppercase`}>
-						#animacion
-				</button>
-				<button
-					type="button" onClick={ disablePhotographs }
-					className={`text-blue-500 hover:opacity-75 ${setOpacity(photograph)} text-md font-medium ${styles.textTitle} uppercase`}>
-						#fotografias
-				</button>
-				<button
-					type="button" onClick={ disableComics }
-					className={`text-green-800 hover:opacity-75 ${setOpacity(comic)} text-md font-medium ${styles.textTitle} uppercase`}>
-						#comics
-				</button>
-				<button
-					type="button" onClick={ disableIllustrations }
-					className={`text-red-500 hover:opacity-75 ${setOpacity(illustration)} text-md font-medium ${styles.textTitle} uppercase`}>
-						#illustracion
-				</button>
+			<div className={`${styles.paddingX} ${styles.paddingY} w-full justify-center grid xs:grid-cols-2 md:grid-cols-4 items-center bg-backgroundColor`}> 
+				{
+					filterDict.map((filter, index) => 
+						<button
+							type="button" onClick={ ()=> (disableFilter(filter, index)) }
+							className={`${filter.color} hover:opacity-75 ${setOpacity(index)} text-md font-medium ${styles.textTitle} uppercase`}>
+								#{filter.tag}
+						</button>
+					)
+				}
 			</div>
 
-			<div className="w-screen mb-20 xs:px-10 md:px-15 xl:px-15 items-center justify-between grid grid-flow-row-dense xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-3 gap-8">
+			<div className="w-screen mb-20 xs:px-10 md:px-15 xl:px-15 items-center justify-between grid grid-auto-flow xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-3 gap-8">
+				{illutrationList.map((artItem) => {
 
-				{illutrationList.map((artItem) => (
-					<ArtItem item={artItem} isVisible={animation}/>
-				))}
-
+					if (artItem.tag == animationFilter && filterDict[0].value == visible)
+						return <ArtItem item={artItem} filters={filterDict}/>
+					if (artItem.tag == photographFilter && filterDict[1].value == visible)
+						return <ArtItem item={artItem} filters={filterDict}/>
+					if (artItem.tag == illustrationFilter && filterDict[2].value == visible)
+						return <ArtItem item={artItem} filters={filterDict}/>
+					if (artItem.tag == comicFilter && filterDict[3].value == visible)
+						return <ArtItem item={artItem} filters={filterDict}/>
+				}
+				)}
 			</div>
 		</div>
 	)

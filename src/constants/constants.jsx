@@ -131,6 +131,9 @@ export const animationFilter = "animation"
 export const photographFilter = "photograph"
 export const illustrationFilter = "illustration"
 export const comicFilter = "comic"
+export const visible = "visible"
+export const hidden = "invisible"
+
 const illutrationList = [
     {
         title: "Web Developer",
