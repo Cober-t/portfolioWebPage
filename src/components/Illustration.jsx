@@ -1,76 +1,72 @@
-import React from "react"
-import Tilt from "react-parallax-tilt"
-import { motion } from "framer-motion"
+import React, { useEffect, useState } from "react"
 
 import { styles } from "../styles"
-import { services } from "../constants/constants"
 import { SectionWrapper } from "../hoc"
-import { fadeIn, textVariant } from "../utils/motion"
-import Navbar from "./Navbar"
-import { illustrationIcon } from "../assets"
+import { illutrationList } from "../constants/constants"
 
-const ServiceCard = ({ index, title, icon }) => (
 
-	<Tilt className='xs:w-[250px] w-full'>
+const ArtItem = ({item, isVisible, ...props}) => {
+	
+    if (isVisible == "visible") {
 
-		<motion.div
-			variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-			className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-		>
-			<div
-				options={{
-					max: 45,
-					scale: 1,
-					speed: 450,
-				}}
-				className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-			>
-
-				<img
-					src={icon}
-					alt='web-development'
-					className='w-16 h-16 object-contain'
-				/>
-
-				<h3 className='text-white text-[20px] font-bold text-center'>
-					{title}
-				</h3>
-
-			</div>
-
-		</motion.div>
-
-	</Tilt>
-);
+		return ( 
+			<img src={item.icon}/>
+		)
+	}
+}
 
 const Illustration = () => {
 
+	const visible = "visible"
+	const hidden = "invisible"
+	const [animation, setAnimationFilter] = useState(visible)
+	const [photograph, setPhotographFilter] = useState(visible)
+	const [illustration, setIllustrationFilter] = useState(visible)
+	const [comic, setComicFilter] = useState(visible)
+
+	const setOpacity = (value) => {
+		return value == hidden ? "opacity-75" : "opacity-35"
+	}
+
+	const disableAnimations = (()=> { setAnimationFilter(animation == visible ? hidden : visible) })
+	const disablePhotographs = (()=> { setPhotographFilter(photograph == visible ? hidden : visible) })
+	const disableIllustrations = (()=> { setIllustrationFilter(illustration == visible ? hidden : visible) })
+	const disableComics = (()=> { setComicFilter(comic == visible ? hidden : visible) })
+
 	return (
-		<>
+		<div className="overflow-y-scroll no-scrollbar">
 
-			<motion.div variants={textVariant()}>
-				<p className={styles.sectionSubText}>Introduction</p>
-				<h2 className={styles.sectionHeadText}>Overview.</h2>
-			</motion.div>
-
-			<motion.p
-				variants={fadeIn("", "", 0.1, 1)}
-				className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-			>
-				I'm a skilled software developer with experience in TypeScript and
-				JavaScript, and expertise in frameworks like React, Node.js, and
-				Three.js. I'm a quick learner and collaborate closely with clients to
-				create efficient, scalable, and user-friendly solutions that solve
-				real-world problems. Let's work together to bring your ideas to life!
-			</motion.p>
-
-			<div className='justify-center mt-20 flex flex-wrap gap-10'>
-				{services.map((service, index) => (
-					<ServiceCard key={service.title} index={index} {...service} />
-				))}
+			<div className={`${styles.paddingX} ${styles.paddingY} xs:inline-block md:flex md:flex-row justify-evenly items-center bg-backgroundColor`}> 
+				<button
+					type="button" onClick={ disableAnimations }
+					className={`text-amber-500 hover:opacity-75 ${setOpacity(animation)} px-6 pb-2 pt-2.5 text-md font-medium leading-normal`}>
+						#animacion
+				</button>
+				<button
+					type="button" onClick={ disablePhotographs }
+					className={`text-blue-500 hover:opacity-75 ${setOpacity(photograph)} px-6 pb-2 pt-2.5 text-md font-medium leading-normal`}>
+						#fotografias
+				</button>
+				<button
+					type="button" onClick={ disableIllustrations }
+					className={`text-red-500 hover:opacity-75 ${setOpacity(illustration)} px-6 pb-2 pt-2.5 text-md font-medium leading-normal`}>
+						#illustracion
+				</button>
+				<button
+					type="button" onClick={ disableComics }
+					className={`text-green-800 hover:opacity-75 ${setOpacity(comic)} px-6 pb-2 pt-2.5 text-md font-medium leading-normal`}>
+						#comics
+				</button>
 			</div>
-		</>
 
+			<div className="justify-between gap-5 xs:columns-2 md:columns-4">
+
+				{illutrationList.map((artItem) => (
+					<ArtItem item={artItem} isVisible={animation}/>
+				))}
+
+			</div>
+		</div>
 	)
 }
 

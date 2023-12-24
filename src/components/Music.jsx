@@ -1,9 +1,8 @@
 import { SectionWrapper } from "../hoc"
 import { musicList } from "../constants/constants";
 import { styles } from "../styles"
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { musicPlay, musicPause } from "../assets";
-import { useRef } from "react";
 
 
 const expandMusicTarget = (musicItem, expanded) => {
@@ -15,7 +14,7 @@ const expandMusicTarget = (musicItem, expanded) => {
 				xs:max-h-[600px] md:max-h-[300px] border-t border-black-100 xs:overflow-y-scroll md:overflow-y-hidden no-scrollbar
 				flex xs:flex-col md:flex-row xs:justify-center md:justify-evenly items-center">
 	
-				<img src={musicPlay} className='w-[250px] h-[250px] xs:mb-5 xs:mt-10 md:mt-3 md:px-[20px] object-contain'/>				
+				<img src={musicItem.icon} className='w-[250px] h-[250px] xs:mb-5 xs:mt-10 md:mt-3 md:px-[20px] object-contain'/>				
 	
 				{/* <div className="xs:mt-5 xs:mb-5 xs:h-[0.05rem] xs:w-[40.5rem] sm:h-[0.05rem] sm:w-[40.5rem] md:h-[12rem] md:w-1 bg-black-100"/> */}
 	
@@ -77,7 +76,7 @@ const Music = () => {
 				<>
 					<div 
 						key={musicItem.name}
-						className={`${styles.textTitle} ${styles.paddingX} select-none min-h-[65px] 
+						className={`${styles.textTitle} ${styles.paddingX} select-none min-h-[65px]
 									flex flex-row justify-between items-center border-black-100 border-t`}
 						onDoubleClick={() => {
 							setExpanded(expanded == musicItem.name ? null : musicItem.name)
@@ -94,11 +93,11 @@ const Music = () => {
 						</div>
 
 						
-						<div className={`${styles.textTitle} flex flex-row gap-5`}>
+						<div className={`${styles.textTitle} flex flex-row gap-8 items-center`}>
 							{musicItem.name}
 
 							<img src={lastPlayedSong == musicItem.name && playing ? musicPause : musicPlay} 
-								className='w-6 h-6 object-contain' 
+								className='w-8 h-8 object-contain' 
 								onClick={()=> { 
 									playing ? stop(musicItem) : play(musicItem)
 									setExpanded(musicItem.name)

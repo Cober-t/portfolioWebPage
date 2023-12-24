@@ -1,10 +1,8 @@
 import { Contact, Hero } from '.';
 import { navLinks, CustomLink } from '../constants/constants';
-import { styles } from '../styles';
-import { useState } from 'react';
+
 
 const Home = () => {
-
 
 	return (
 

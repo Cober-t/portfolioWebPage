@@ -127,22 +127,85 @@ export const navLinks = [
     },
 ];
 
-const services = [
+export const animationFilter = "animation"
+export const photographFilter = "photograph"
+export const illustrationFilter = "illustration"
+export const comicFilter = "comic"
+const illutrationList = [
     {
         title: "Web Developer",
         icon: web,
+        tag: photographFilter
     },
     {
         title: "React Native Developer",
         icon: mobile,
+        tag: illustrationFilter
     },
     {
         title: "Backend Developer",
         icon: backend,
+        tag: comicFilter
     },
     {
         title: "Content Creator",
         icon: creator,
+        tag: animationFilter
+    },
+    {
+        title: "Web Developer",
+        icon: web,
+        tag: photographFilter
+    },
+    {
+        title: "React Native Developer",
+        icon: mobile,
+        tag: illustrationFilter
+    },
+    {
+        title: "Backend Developer",
+        icon: backend,
+        tag: comicFilter
+    },
+    {
+        title: "Webbb  Developer",
+        icon: web,
+        tag: photographFilter
+    },
+    {
+        title: "Native Developer",
+        icon: mobile,
+        tag: illustrationFilter
+    },
+    {
+        title: "Developer",
+        icon: backend,
+        tag: comicFilter
+    },
+    {
+        title: "Creator",
+        icon: creator,
+        tag: animationFilter
+    },
+    {
+        title: "Web",
+        icon: web,
+        tag: photographFilter
+    },
+    {
+        title: "React Native",
+        icon: mobile,
+        tag: illustrationFilter
+    },
+    {
+        title: "Backend",
+        icon: backend,
+        tag: comicFilter
+    },
+    {
+        title: "Content",
+        icon: creator,
+        tag: animationFilter
     },
 ];
 
@@ -179,61 +242,7 @@ const musicList = [
         loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
         loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
     },
-    {
-        name: "React JS",
-        icon: reactjs,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "Tailwind CSS",
-        icon: tailwind,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "Node JS",
-        icon: nodejs,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "Three JS",
-        icon: threejs,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "git",
-        icon: git,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "figma",
-        icon: figma,
-        path: testSong,
-        text: "loren ipstum",
-    },
-    {
-        name: "docker",
-        icon: docker,
-        path: testSong,
-        text: "loren ipstum",
-    },
-];
+shopify];
 
 const experiences = [
     {
@@ -383,4 +392,4 @@ const projects = [
     },
 ];
 
-export { services, musicList, experiences, testimonials, projects };
+export { illutrationList, musicList, experiences, testimonials, projects };
