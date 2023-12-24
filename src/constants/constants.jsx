@@ -242,7 +242,7 @@ const musicList = [
         loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
         loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
     },
-shopify];
+];
 
 const experiences = [
     {
