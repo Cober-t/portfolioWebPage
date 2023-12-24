@@ -1,10 +1,31 @@
 import {
+    logo,
     musicIcon,
-    illustrationIcon,
-    videogameIcon,
-    art3dIcon,
+    musicPause,
+    musicPlay,
     otherIcon,
+    videogameIcon,
+    illustrationIcon,
+    art3dIcon,
+
     testSong,
+
+    art1,
+    art2,
+    art3,
+    art4,
+    art5,
+    art6,
+    art7,
+    art8,
+    art9,
+    art10,
+    art11,
+    art12,
+    art13,
+    art14,
+    art15,
+
     mobile,
     backend,
     creator,
@@ -137,77 +158,82 @@ export const hidden = "invisible"
 const illutrationList = [
     {
         title: "Web Developer",
-        icon: web,
+        image: art1,
         tag: photographFilter
     },
     {
         title: "React Native Developer",
-        icon: mobile,
+        image: art2,
         tag: illustrationFilter
     },
     {
         title: "Backend Developer",
-        icon: backend,
+        image: art3,
         tag: comicFilter
     },
     {
         title: "Content Creator",
-        icon: creator,
+        image: art4,
         tag: animationFilter
     },
     {
         title: "Web Developer",
-        icon: web,
+        image: art5,
         tag: photographFilter
     },
     {
         title: "React Native Developer",
-        icon: mobile,
+        image: art6,
         tag: illustrationFilter
     },
     {
         title: "Backend Developer",
-        icon: backend,
+        image: art7,
         tag: comicFilter
     },
     {
         title: "Webbb  Developer",
-        icon: web,
+        image: art8,
         tag: photographFilter
     },
     {
         title: "Native Developer",
-        icon: mobile,
+        image: art9,
         tag: illustrationFilter
     },
     {
         title: "Developer",
-        icon: backend,
+        image: art10,
         tag: comicFilter
     },
     {
         title: "Creator",
-        icon: creator,
+        image: art11,
         tag: animationFilter
     },
     {
         title: "Web",
-        icon: web,
+        image: art11,
         tag: photographFilter
     },
     {
         title: "React Native",
-        icon: mobile,
+        image: art12,
         tag: illustrationFilter
     },
     {
         title: "Backend",
-        icon: backend,
+        image: art13,
         tag: comicFilter
     },
     {
         title: "Content",
-        icon: creator,
+        image: art14,
+        tag: animationFilter
+    },
+    {
+        title: "Content gif 2",
+        image: art15,
         tag: animationFilter
     },
 ];
