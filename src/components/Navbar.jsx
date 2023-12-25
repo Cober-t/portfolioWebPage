@@ -8,7 +8,7 @@ const Navbar = () => {
 
         return (
 
-            <nav className={`${active} sticky top-0 py-9 z-20 flex w-full items-center bg-backgroundColor border-b-2 border-black-100`}>
+            <nav className={`${active} sticky top-0 py-9 z-10 flex w-full items-center bg-backgroundColor border-b-2 border-black-100`}>
 
                 {/*=========  MAIN ICONS  ==========*/}
                 <div className='flex gap-6 absolute left-0 px-10'>

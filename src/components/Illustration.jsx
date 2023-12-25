@@ -2,26 +2,41 @@ import React, { useEffect, useState } from "react"
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { illutrationList, visible, hidden, animationFilter, comicFilter, photographFilter, illustrationFilter } from "../constants/constants"
+import { art1 } from "../assets"
 
 
-const ArtItem = ({item, filters, ...props}) => {
+const ArtItem = ({artItem, filters, ...props}) => (
+	
+	filters.map((filter) => {
+		
+		if (artItem.tag === filter.tag && filter.value == visible)
+			return <img src={artItem.image} {...props} />
+	})
+)
 
-	return (
-		<img src={item.image}
-			onClick={()=> {console.log(item.title)}}
-			{...props}
-		/>
-	)
-}
 
 const Illustration = () => {
 	
+	const [imagePreviewd, setImagePreviewed] = useState(null)
+	const [previewActive, setPreviewActive] = useState("invisible")
 	const [filterDict, setFiltersDict] = useState([
 		{ tag: animationFilter,    value: visible, color: "text-purple-500"},
 		{ tag: comicFilter, 	   value: visible, color: "text-red-500"},
 		{ tag: photographFilter,   value: visible, color: "text-blue-500"},
 		{ tag: illustrationFilter, value: visible, color: "text-green-700"},
 	])
+
+	useEffect(() => {
+		const handleEsc = (event) => {
+		   if (event.key === 'Escape')
+				setPreviewActive("invisible")
+		};
+			window.addEventListener('keydown', handleEsc);
+	
+		return () => {
+		  	window.removeEventListener('keydown', handleEsc);
+		};
+	}, []);
 	
 	const setOpacity = (index) => {
 		return filterDict[index].value == visible ? "opacity-75" : "opacity-35"
@@ -37,39 +52,42 @@ const Illustration = () => {
 	}
 	
 	return (
-		<div className="overflow-y-scroll no-scrollbar">
+		<>
+			<div className={`${previewActive} fixed select-none z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
+				<figure class="mt-5 max-w-full h-auto object-fit">
+					<img src={imagePreviewd} className="hover:scale-150 hover:overflow-y-scroll no-scrollbar"/>
+					<figcaption class="font-homeSections font-semibold mt-2 text-center text-gray-800 dark:text-gray-800">
+						Image caption
+					</figcaption>
+				</figure>
+			</div>
 
-			<div className={`${styles.paddingX} ${styles.paddingY} w-full justify-center grid xs:grid-cols-2 md:grid-cols-4 items-center bg-backgroundColor`}> 
-				{
-					filterDict.map((filter, index) => 
+			<div className={`${previewActive} select-none w-full h-full bg-gray-300 fixed z-10 opacity-75`}/>
+
+			<div className="select-none overflow-y-scroll no-scrollbar">
+
+				<div className={`${styles.paddingX} ${styles.paddingY} w-full justify-center grid xs:grid-cols-2 md:grid-cols-4 items-center bg-backgroundColor`}> 
+					
+					{filterDict.map((filter, index) => 
 						<button
 							type="button" onClick={ ()=> (disableFilter(filter, index)) }
 							className={`${filter.color} hover:opacity-75 ${setOpacity(index)} text-md font-medium ${styles.textTitle} uppercase`}>
 								#{filter.tag}
 						</button>
-					)
-				}
+					)}
+					
+				</div>
+
+				<div className="xs:columns-2 sm:columns-3 mr-10 ml-10 md:columns-4 gap-x-6">
+					
+					{illutrationList.map((artItem) => 
+
+						<ArtItem artItem={artItem} filters={filterDict} className="py-3" onClick={()=> {setPreviewActive("visible"); setImagePreviewed(artItem.image)}}/>
+					)}
+
+				</div>
 			</div>
-
-			{/* <div className="w-screen mb-20 xs:px-10 md:px-15 xl:px-15 items-center justify-between grid grid-flow-dense xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xs:gap-3 gap-8"> */}
-			<div className="xs:columns-2 sm:columns-3 mr-10 ml-10 md:columns-4 gap-x-6">
-				{illutrationList.map((artItem) => {
-
-					if (artItem.tag == animationFilter && filterDict[0].value == visible)
-						return <ArtItem item={artItem} filters={filterDict} className="py-3"/>
-
-					if (artItem.tag == photographFilter && filterDict[1].value == visible)
-						return <ArtItem item={artItem} filters={filterDict} className="py-3"/>
-
-					if (artItem.tag == illustrationFilter && filterDict[2].value == visible)
-						return <ArtItem item={artItem} filters={filterDict} className="py-3"/>
-
-					if (artItem.tag == comicFilter && filterDict[3].value == visible)
-						return <ArtItem item={artItem} filters={filterDict} className="py-3"/>
-					}
-				)}
-			</div>
-		</div>
+		</>
 	)
 }
 

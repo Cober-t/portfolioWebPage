@@ -16,8 +16,6 @@ const expandMusicTarget = (musicItem, expanded) => {
 	
 				<img src={musicItem.icon} className='w-[250px] h-[250px] xs:mb-5 xs:mt-10 md:mt-3 md:px-[20px] object-contain'/>				
 	
-				{/* <div className="xs:mt-5 xs:mb-5 xs:h-[0.05rem] xs:w-[40.5rem] sm:h-[0.05rem] sm:w-[40.5rem] md:h-[12rem] md:w-1 bg-black-100"/> */}
-	
 				<div className="border-black-100 md:border-l md:border-t-0 xs:mr-5 xs:ml-5 xs:border-t md:mb-2s md:overflow-y-scroll no-scrollbar">
 					<p className={`${styles.textBody} md:max-h-[200px] xs:py-5 xs:mb-5 md:px-5 text-justify`}>
 						{musicItem.text}
