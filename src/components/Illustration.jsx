@@ -54,15 +54,17 @@ const Illustration = () => {
 	return (
 		<>
 			<div className={`${previewActive} fixed select-none z-20 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2`}>
-				<figure class="mt-5 max-w-full h-auto object-fit">
+				<figure className="mt-5 max-w-full h-auto object-fit">
 					<img src={imagePreviewd} className="hover:scale-150 hover:overflow-y-scroll no-scrollbar"/>
-					<figcaption class="font-homeSections font-semibold mt-2 text-center text-gray-800 dark:text-gray-800">
+					<figcaption className="font-homeSections font-semibold mt-2 text-center text-gray-800 dark:text-gray-800">
 						Image caption
 					</figcaption>
 				</figure>
 			</div>
 
-			<div className={`${previewActive} select-none w-full h-full bg-gray-300 fixed z-10 opacity-75`}/>
+			<div
+				onClick={()=> {setPreviewActive("invisible")}} 
+				className={`${previewActive} select-none w-full h-full bg-gray-300 fixed z-10 opacity-75`}/>
 
 			<div className="select-none overflow-y-scroll no-scrollbar">
 

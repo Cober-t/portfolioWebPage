@@ -28,6 +28,8 @@ import art13 from "./illustration/test13.jpg"
 import art14 from "./illustration/test14.gif"
 import art15 from "./illustration/test15.gif"
 
+import videogameDictPath from "./videogames/videogameDict.json"
+
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -61,6 +63,8 @@ import tripguide from "./tripguide.png";
 
 
 
+
+
 export {
   logo,
   musicIcon,
@@ -88,6 +92,8 @@ export {
   art13,
   art14,
   art15,
+
+  videogameDictPath,
 
   backend,
   creator,

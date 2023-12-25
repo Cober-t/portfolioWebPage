@@ -26,10 +26,11 @@ npm install --legacy-peer-deps eslint-plugin-react-hooks
     [ ] Import models, create layout
     [ ] Add buttons to show animations, geometry, normals...
 
-[ ] Create Ilustration page (2)
-    [ ] Upload gifs, comic, ilustration, animation
+[ ] Create Ilustration page (3)
+    [X] Upload gifs, comic, ilustration, animation
     [X] Learn to reorder items
     [X] Gifs, comic, ilustration and animation filters
+    [ ] Preview image layout and scroll scale up or move drag
 
 [ ] Create other page (2)
     [ ] Create galery with tags
