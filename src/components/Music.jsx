@@ -70,46 +70,46 @@ const Music = () => {
 	
 	return (
 		<>
-			{musicList.map((musicItem) => (
-				<>
-					<div 
-						key={musicItem.name}
-						className={`${styles.textTitle} ${styles.paddingX} select-none min-h-[65px]
-									flex flex-row justify-between items-center border-black-100 border-t`}
-						onDoubleClick={() => {
-							setExpanded(expanded == musicItem.name ? null : musicItem.name)
-						}}>
+		{musicList.map((musicItem) => (
+			<>
+			<div 
+				key={musicItem.name}
+				className={`${styles.textTitle} ${styles.paddingX} select-none min-h-[65px]
+							flex flex-row justify-between items-center border-black-100 border-t`}
+				onDoubleClick={() => {
+					setExpanded(expanded == musicItem.name ? null : musicItem.name)
+				}}>
 
-						<audio
-							ref={audioRef}
-							src={musicItem.path}
-							onTimeUpdate={onPlaying}
-						/>
-						
-						<div className={`${styles.textTitle} gap-5`}>
-							{audioRef.current == null ? "00:00": convertTime(audioRef.current.duration) }
-						</div>
+				<audio
+					ref={audioRef}
+					src={musicItem.path}
+					onTimeUpdate={onPlaying}
+				/>
+				
+				<div className={`${styles.textTitle} gap-5`}>
+					{audioRef.current == null ? "00:00": convertTime(audioRef.current.duration) }
+				</div>
 
-						
-						<div className={`${styles.textTitle} flex flex-row gap-8 items-center`}>
-							{musicItem.name}
+				
+				<div className={`${styles.textTitle} flex flex-row gap-8 items-center`}>
+					{musicItem.name}
 
-							<img src={lastPlayedSong == musicItem.name && playing ? musicPause : musicPlay} 
-								className='w-8 h-8 object-contain' 
-								onClick={()=> { 
-									playing ? stop(musicItem) : play(musicItem)
-									setExpanded(musicItem.name)
-									setLastPlayedSong(musicItem.name)
-								}}
-							/>
-						</div>
-					</div>
+					<img src={lastPlayedSong == musicItem.name && playing ? musicPause : musicPlay} 
+						className='w-8 h-8 object-contain' 
+						onClick={()=> { 
+							playing ? stop(musicItem) : play(musicItem)
+							setExpanded(musicItem.name)
+							setLastPlayedSong(musicItem.name)
+						}}
+					/>
+				</div>
+			</div>
 
-					<div>
-						{expandMusicTarget(musicItem, expanded)}
-					</div>
-				</>
-			))}
+			<div>
+				{expandMusicTarget(musicItem, expanded)}
+			</div>
+			</>
+		))}
 		</>
 	)
 }

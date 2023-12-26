@@ -26,7 +26,7 @@ const SectionWrapper = (Component, idName) =>
                         &nbsp;
                     </span> */}
 
-                <div className={`relative z-0 bg-backgroundColor`}>
+                <div className={`relative z-0 bg-backgroundColor overflow-none`}>
                     <Component/>
                 </div>
                     

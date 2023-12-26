@@ -18,7 +18,7 @@ npm install --legacy-peer-deps eslint-plugin-react-hooks
     [x] Play and stop music
 
 [ ] Create Videogames Sections (2)
-    [ ] Create scroll videogames, gallery and preview
+    [X] Create scroll videogames, gallery and preview
     [ ] Videogame page layout, upload video, gif or links
 
 [ ] Create 3D Art Section (3)
@@ -38,6 +38,7 @@ npm install --legacy-peer-deps eslint-plugin-react-hooks
     [ ] Create article page and do the layout
     
 [x] Create Subscribe button and send emails
+[x] Get Resources from a JSON
 [ ] Create Newsletter Telegram bot
 [ ] Global portfolio filter (1)
 [ ] Create Icons for sections and menu (1)
