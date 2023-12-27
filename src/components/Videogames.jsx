@@ -52,18 +52,32 @@ const VideogamePreviewTemplate = ({videogame, ...props}) => {
 				<div className="flex justify-center h-[0.05rem] w-full bg-black-100"/>
 
 				{/*=========  PROJECT  ==========*/}
-				<div className="grid grid-cols-2">
+				<div className="xs:grid-cols-1 grid-cols-1 grid lg:grid-cols-2">
 
-					<div className="grid grid-cols-2 font-homeSections font-medium uppercase text-gray-700 xs:px-12 md:px-5 py-5">
-						ABOUT THE PROJECT
+					<div className="flex flex-row w-full font-homeSections font-medium uppercase text-gray-700 xs:px-12 md:px-5 py-5">
+						<div className="flex md:flex-col">
 
-						<img src={videogame.coverImg} className="object-contain h-fulljustify-end"/>
+							<p className="text-[28px] text-black-100 font-semibold mr-5">ABOUT THE PROJECT</p>
 
-						<div className="flex justify-center h-full w-[0.05rem] bg-black-100"/>
+							<div className="flex flex-col text-end font-homeSections mr-5 h-fit">
+								<p className="text-[36px] text-black-100 font-semibold">{videogame.developmentDays}</p>
+								<p className="text-[12px] text-gray-500 font-regular mb-5">Development days</p>
+								<p className="text-[36px] text-black-100 font-semibold">{videogame.skillLevel}</p>
+								<p className="text-[12px] text-gray-500 font-regular mb-5">Time to complete the game</p>
+								<p className="text-[36px] text-black-100 font-semibold">{videogame.timeToComplete}</p>
+								<p className="text-[12px] text-gray-500 font-regular">Skill required to play the game</p>
+							</div>
+						</div>
+
+						<img src={videogame.coverImg} className="inline-object object-contain xs:h-full lg:w-full justify-end"/>
+
 					</div>
 
-					<div className={`${styles.textBody} xs:pr-10 md:pr-10 py-5 text-[14px] text-justify tracking-normal flex flex-col`}>
-						{descriptionText}
+					<div className={`${styles.textBody} lg:pr-10 py-5 flex lg:flex-row xs:flex-col`}>
+						<p className="xs:px-10 lg:px-5 text-[14px] font-bodySection font-regular tracking-normal text-justify">
+							<div className="flex justify-shelf-center lg:h-full lg:w-[0.1rem] xs:h-[0.1em] mt-3 mb-3 xs:w-full bg-black-100"/>
+							{descriptionText}
+						</p>
 					</div>
 
 				</div>
