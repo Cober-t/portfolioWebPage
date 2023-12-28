@@ -42,40 +42,42 @@ const VideogamePreviewTemplate = ({videogame, ...props}) => {
 				</div>
 
 				{/*=====  VERTICAL LINE 1  =====*/}
-				<div className="flex justify-center h-[0.05rem] w-full bg-black-100"/>
+				<div className="flex justify-center h-[0.1rem] w-full bg-black-100"/>
 
 				{/*=======  GAMEPLAY IMG  ======*/}
 				<img src={videogame.gameplayImg} className="w-full py-5 object-contain"/>
 
-
 				{/*=====  VERTICAL LINE 2  =====*/}
-				<div className="flex justify-center h-[0.05rem] w-full bg-black-100"/>
-
+				<div className="flex justify-center h-[0.1rem] w-full bg-black-100"/>
 				{/*=========  PROJECT  ==========*/}
-				<div className="xs:grid-cols-1 grid-cols-1 grid lg:grid-cols-2">
+				<div className="xs:columns-auto columns grid justify-center lg:grid-cols-2">
+					
 
-					<div className="flex flex-row w-full font-homeSections font-medium uppercase text-gray-700 xs:px-12 md:px-5 py-5">
-						<div className="flex md:flex-col">
+					<div className="flex lg:justify-between w-full h-full font-homeSections font-medium uppercase text-gray-700 xs:px-6 md:pl-10 py-5 lg:mb-10">
 
-							<p className="text-[28px] text-black-100 font-semibold mr-5">ABOUT THE PROJECT</p>
-
-							<div className="flex flex-col text-end font-homeSections mr-5 h-fit">
-								<p className="text-[36px] text-black-100 font-semibold">{videogame.developmentDays}</p>
-								<p className="text-[12px] text-gray-500 font-regular mb-5">Development days</p>
-								<p className="text-[36px] text-black-100 font-semibold">{videogame.skillLevel}</p>
-								<p className="text-[12px] text-gray-500 font-regular mb-5">Time to complete the game</p>
-								<p className="text-[36px] text-black-100 font-semibold">{videogame.timeToComplete}</p>
-								<p className="text-[12px] text-gray-500 font-regular">Skill required to play the game</p>
+						<div className="xs:flex-col h-full w-full">
+							<div className="flex flex-row w-full">
+								<p className="text-[28px] text-black-100 font-semibold mr-5 mb-10 text-start">ABOUT THE PROJECT</p>
+							</div>
+							<div className="flex flex-row justify-end font-homeSections">
+								<div className="flex flex-col text-end mr-5">
+									<p className="text-[36px] text-black-100 font-semibold">{videogame.developmentDays}</p>
+									<p className="text-[12px] text-gray-500 font-regular mb-5">Development days</p>
+									<p className="text-[36px] text-black-100 font-semibold">{videogame.skillLevel}</p>
+									<p className="text-[12px] text-gray-500 font-regular mb-5">Time to complete the game</p>
+									<p className="text-[36px] text-black-100 font-semibold">{videogame.timeToComplete}</p>
+									<p className="text-[12px] text-gray-500 font-regular">Skill required to play the game</p>
+								</div>
+								<img src={videogame.coverImg} className="object-contain xs:h-fit justify-end sm:hidden xs:blocks"/>
 							</div>
 						</div>
-
-						<img src={videogame.coverImg} className="inline-object object-contain xs:h-full lg:w-full justify-end"/>
+						<img src={videogame.coverImg} className="object-contain xs:h-full lg:w-full justify-end xs:hidden sm:block"/>
 
 					</div>
 
 					<div className={`${styles.textBody} lg:pr-10 py-5 flex lg:flex-row xs:flex-col`}>
-						<p className="xs:px-10 lg:px-5 text-[14px] font-bodySection font-regular tracking-normal text-justify">
-							<div className="flex justify-shelf-center lg:h-full lg:w-[0.1rem] xs:h-[0.1em] mt-3 mb-3 xs:w-full bg-black-100"/>
+						<div className="flex justify-shelf-center lg:h-full lg:w-[0.1rem] xs:h-[0.1em] mt-3 mb-3 xs:w-full bg-black-100"/>
+						<p className="xs:px-6 md:pl-6 text-[14px] font-bodySection font-regular tracking-normal text-justify">
 							{descriptionText}
 						</p>
 					</div>
@@ -119,17 +121,19 @@ const VideogameItemList = ({videogame, previewImage, ...props}) => {
 	return (
 		<div
 			key={videogame.name}
-			className={`xs:px-10 px-4 xs:max-h-[100px] md:xs:max-h-[150px] border-black-100 
-				flex justify-between gap-x-4 border-b border-r items-center`}
-				// bg-[url('${previewImage}')]`}
+			style={{'--image-url': `url(${previewImage})`}}
+			className={`max-h-[200px] border-black-100 
+			border-b border-r items-center lg:bg-transparent xs:bg-[image:var(--image-url)] xs:bg-cover xs:bg-center xs:bg-no-repeat`}
 			{...props}>
 			
-			<SubtitleComponent 
-				videogame={videogame} 
-				className={`font-homeSections font-medium uppercase text-gray-400 py-5 text-[11px] max-w-[200px] text-start`}/>
+			<div className="lg:bg-opacity-100 xs:backdrop-blur-[2px] xs:bg-primary xs:bg-cover xs:bg-opacity-45 xs:h-full xs:w-full xs:flex flex justify-between items-center gap-x-4 xs:px-10 xs:py-10 px-4">
+				<SubtitleComponent 
+					videogame={videogame} 
+					className={`font-homeSections font-medium uppercase xs:text-gray-300 lg:text-gray-400 py-5 text-[11px] max-w-[200px] text-start`}/>
 
-			<div className={`font-homeSections font-medium uppercase text-gray-800 text-end text-[28px]`}>
-				{videogame.title}
+				<div className={`font-homeSections font-medium uppercase text-gray-800 text-end text-[28px]`}>
+					{videogame.title}
+				</div>
 			</div>
 		</div>
 	)
@@ -165,31 +169,30 @@ const Videogames = () => {
 				<VideogamePreviewTemplate videogame={videogamePreview}/>
 			</div>
 
-			<div className={`${previewVisibility == "visible" ? "hidden" : "visible"} grid grid-cols-2 overflow-none`}>
+			<div className={`${previewVisibility == "block" ? "hidden" : "block"} grid xs:grid-cols-1 lg:grid-cols-2 overflow-none
+					max-h-screen md:grid gap-0 h-screen select-none`}>
 
-				<div className="max-h-screen md:grid-cols-1 md:grid gap-0 h-screen select-none overflow-y-scroll no-scrollbar">
-
+				<div className="flex flex-col overflow-y-scroll no-scrollbar">
 					{...videogameList.map((videogame) =>
 
 						<VideogameItemList
 							videogame={videogame}
 							previewImage={videogameImage}
 							onDoubleClick={()=> {
-								setPreviewVisibility("visible")
+								setPreviewVisibility("block")
 								setVideogamePreview(videogame)
 							}}
 							onClick={() => { setVideogameImage(videogame.gameplayImg) }}
 							onMouseEnter={()=> { setVideogameImage(videogame.gameplayImg) }}/>
 
 					)}
-
-				</div>	
-				
-				<div className={`xs:invisible md:${previewVisibility == "visible" ? "hidden" : "visible"} flex flex-col items-center`}>
-					<img src={videogameImage} alt="Image not found"
-						className="object-contain"/>
 				</div>
-			</div>
+
+				<div className={`xs:hidden lg:block relative items-center`}>
+					<img src={videogameImage} alt="Image not found"
+						className=""/>
+				</div>
+			</div>	
 
 		</>
 	)
