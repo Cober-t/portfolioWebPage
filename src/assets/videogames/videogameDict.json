@@ -8,7 +8,7 @@
         "developmentDays": "23",
         "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
         "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4",
+        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
         "description": "../assets/videogames/hollowKnightDescription.txt"
@@ -22,7 +22,21 @@
         "developmentDays": "23",
         "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
         "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4",
+        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "devDiaryLink": "asdsd",
+        "itchLink": "https://www.google.com",
+        "description": "../assets/videogames/hollowKnightDescription.txt"
+    },
+    {
+        "title": "Dead Cells",
+        "subtitle": "Subtitle example for show how to describe a videogame",
+        "releaseDate": "26/12/2023",
+        "timeToComplete": "50",
+        "skillLevel": "4/5",
+        "developmentDays": "23",
+        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
+        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
         "description": "../assets/videogames/hollowKnightDescription.txt"
@@ -36,7 +50,7 @@
         "developmentDays": "23",
         "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
         "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4",
+        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
         "description": "../assets/videogames/hollowKnightDescription.txt"
@@ -50,7 +64,7 @@
         "developmentDays": "23",
         "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
         "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4",
+        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
         "description": "../assets/videogames/hollowKnightDescription.txt"
@@ -64,21 +78,7 @@
         "developmentDays": "23",
         "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
         "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4",
-        "devDiaryLink": "asdsd",
-        "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
-    },
-    {
-        "title": "Dead Cells",
-        "subtitle": "Subtitle example for show how to describe a videogame",
-        "releaseDate": "26/12/2023",
-        "timeToComplete": "23",
-        "skillLevel": "4/5",
-        "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "https://www.youtube.com/watch?v=UAO2urG23S4",
+        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
         "description": "../assets/videogames/hollowKnightDescription.txt"

@@ -273,6 +273,70 @@ const musicList = [
         loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
         loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
     },
+    {
+        name: "TypeadadScript",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TypeScdadadaipt",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TypeScasdaript",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TypeScripdddt",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TyasdpeScript",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TypeScadadript",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TypeScraddipt",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    },
+    {
+        name: "TypeScrasdapt",
+        icon: typescript,
+        path: testSong,
+        text: "loren ipstum  loren ipstum  loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum \
+        loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum loren ipstum."
+    }
 ];
 
 

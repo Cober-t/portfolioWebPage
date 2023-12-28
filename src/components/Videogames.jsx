@@ -3,6 +3,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import videogameList from '../assets/videogames/videogameDict.json'
 import { musicPlay } from "../assets";
+import ReactPlayer from "react-player";
 
 
 const VideogamePreviewTemplate = ({videogame, ...props}) => {
@@ -25,17 +26,17 @@ const VideogamePreviewTemplate = ({videogame, ...props}) => {
 			<div>
 
 				{/*=========  HEADER  ==========*/}
-				<div className="xs:px-12 px-6 x:pt-12 pt-10">
+				<div className="px-6 pt-10">
 
-					<div className={`font-homeSections font-semibold uppercase text-gray-700 text-left flex flex-row text-[42px]`}>
+					<div className={`font-homeSections font-semibold uppercase text-gray-700 text-left flex flex-row text-[72px]`}>
 						{videogame.title}
 					</div>
 
 					<SubtitleComponent 
 						videogame={videogame}
-						className={`font-homeSections font-medium uppercase text-gray-500 mt-3 text-[14px] text-start`}/>
+						className={`font-homeSections font-medium uppercase text-gray-500 mt-3 ml-1.5 text-[14px] text-start`}/>
 
-					<div className={`font-homeSections font-medium uppercase text-gray-400 mb-1 text-[14px] text-end`}>
+					<div className={`font-homeSections font-medium uppercase text-gray-500 mb-1 text-[14px] text-end`}>
 						{videogame.releaseDate}
 					</div>
 
@@ -50,16 +51,15 @@ const VideogamePreviewTemplate = ({videogame, ...props}) => {
 				{/*=====  VERTICAL LINE 2  =====*/}
 				<div className="flex justify-center h-[0.1rem] w-full bg-black-100"/>
 				{/*=========  PROJECT  ==========*/}
-				<div className="xs:columns-auto columns grid justify-center lg:grid-cols-2">
-					
+				<div className="xs:grid xs:grid-cols-1 justify-center lg:flex">
 
-					<div className="flex lg:justify-between w-full h-full font-homeSections font-medium uppercase text-gray-700 xs:px-6 md:pl-10 py-5 lg:mb-10">
+					<div className="flex lg:justify-between w-full h-full font-homeSections font-medium uppercase text-gray-700 xs:px-6 md:pl-10 py-5">
 
 						<div className="xs:flex-col h-full w-full">
 							<div className="flex flex-row w-full">
-								<p className="text-[28px] text-black-100 font-semibold mr-5 mb-10 text-start">ABOUT THE PROJECT</p>
+								<p className="text-[28px] sm:min-w-[175px] text-black-100 font-semibold mr-5 mb-10 text-start">ABOUT THE PROJECT</p>
 							</div>
-							<div className="flex flex-row justify-end font-homeSections">
+							<div className="flex flex-row justify-end items-start font-homeSections">
 								<div className="flex flex-col text-end mr-5">
 									<p className="text-[36px] text-black-100 font-semibold">{videogame.developmentDays}</p>
 									<p className="text-[12px] text-gray-500 font-regular mb-5">Development days</p>
@@ -68,18 +68,27 @@ const VideogamePreviewTemplate = ({videogame, ...props}) => {
 									<p className="text-[36px] text-black-100 font-semibold">{videogame.timeToComplete}</p>
 									<p className="text-[12px] text-gray-500 font-regular">Skill required to play the game</p>
 								</div>
-								<img src={videogame.coverImg} className="object-contain xs:h-fit justify-end sm:hidden xs:blocks"/>
+								<img src={videogame.coverImg} className="object-contain xs:h-fit justify-end sm:hidden xs:block"/>
 							</div>
 						</div>
-						<img src={videogame.coverImg} className="object-contain xs:h-full lg:w-full justify-end xs:hidden sm:block"/>
+						<img src={videogame.coverImg} className="xs:h-full items-end lg:w-full lg:min-w-[300px] justify-end xs:hidden sm:block"/>
 
 					</div>
 
-					<div className={`${styles.textBody} lg:pr-10 py-5 flex lg:flex-row xs:flex-col`}>
-						<div className="flex justify-shelf-center lg:h-full lg:w-[0.1rem] xs:h-[0.1em] mt-3 mb-3 xs:w-full bg-black-100"/>
-						<p className="xs:px-6 md:pl-6 text-[14px] font-bodySection font-regular tracking-normal text-justify">
-							{descriptionText}
-						</p>
+					<div className={`${styles.textBody} lg:max-w-[500px] py-5 flex lg:flex-row xs:flex-col items-center`}>
+						<div className="lg:block xs:hidden lg:h-full lg:w-[0.1rem] xs:h-[0.1em] mt-3 mb-3 xs:w-full bg-black-100"/>
+						<div className="flex flex-col xs:px-6 md:pl-6 lg:h-full xs:h-[500px] items-center">
+							<div className="xs:block lg:hidden lg:h-full lg:w-[0.1rem] xs:h-[0.1em] mt-3 mb-3 xs:w-full bg-black-100"/>
+							<p className="text-[14px] font-bodySection font-regular tracking-normal mb-8 justify-start text-justify">
+								{descriptionText}
+							</p>
+							<div className="lg:block xs:hidden h-full w-full">
+								<ReactPlayer height="100%" width="100%" url="https://www.youtube.com/watch?v=UAO2urG23S4"/>
+							</div>
+							<div className="lg:hidden xs:block h-full w-full justify-center flex items-center">
+								<ReactPlayer height="100%" width="75%" url="https://www.youtube.com/watch?v=UAO2urG23S4"/>
+							</div>
+						</div>
 					</div>
 
 				</div>
@@ -122,14 +131,14 @@ const VideogameItemList = ({videogame, previewImage, ...props}) => {
 		<div
 			key={videogame.name}
 			style={{'--image-url': `url(${previewImage})`}}
-			className={`max-h-[200px] border-black-100 
+			className={`max-h-md border-black-100 
 			border-b border-r items-center lg:bg-transparent xs:bg-[image:var(--image-url)] xs:bg-cover xs:bg-center xs:bg-no-repeat`}
 			{...props}>
 			
-			<div className="lg:bg-opacity-100 xs:backdrop-blur-[2px] xs:bg-primary xs:bg-cover xs:bg-opacity-45 xs:h-full xs:w-full xs:flex flex justify-between items-center gap-x-4 xs:px-10 xs:py-10 px-4">
+			<div className="lg:bg-opacity-100 xs:backdrop-blur-[2px] xs:bg-primary xs:bg-cover xs:bg-opacity-45  xs:w-full xs:flex flex justify-between items-center gap-x-4 xs:px-10 xs:py-10 px-4">
 				<SubtitleComponent 
 					videogame={videogame} 
-					className={`font-homeSections font-medium uppercase xs:text-gray-300 lg:text-gray-400 py-5 text-[11px] max-w-[200px] text-start`}/>
+					className={`font-homeSections font-medium uppercase xs:text-gray-300 lg:text-gray-400 text-[11px] max-w-[200px] text-start`}/>
 
 				<div className={`font-homeSections font-medium uppercase text-gray-800 text-end text-[28px]`}>
 					{videogame.title}
@@ -169,10 +178,10 @@ const Videogames = () => {
 				<VideogamePreviewTemplate videogame={videogamePreview}/>
 			</div>
 
-			<div className={`${previewVisibility == "block" ? "hidden" : "block"} grid xs:grid-cols-1 lg:grid-cols-2 overflow-none
-					max-h-screen md:grid gap-0 h-screen select-none`}>
+			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} grid xs:grid-cols-1 lg:grid-cols-2
+				h-screen md:grid gap-0 select-none`}>
 
-				<div className="flex flex-col overflow-y-scroll no-scrollbar">
+				<div className="overflow-y-scroll no-scrollbar">
 					{...videogameList.map((videogame) =>
 
 						<VideogameItemList
@@ -188,9 +197,9 @@ const Videogames = () => {
 					)}
 				</div>
 
-				<div className={`xs:hidden lg:block relative items-center`}>
+				<div className="flex items-center top-1/4 relative justify-center xs:hidden lg:block">
 					<img src={videogameImage} alt="Image not found"
-						className=""/>
+						className="px-5"/>
 				</div>
 			</div>	
 
