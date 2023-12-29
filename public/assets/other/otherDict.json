@@ -1,0 +1,9 @@
+[
+    {
+        "previewImg": "../assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "../assets/other/kirbyHeaderImg.jpg",
+        "date": "26/12/2023",
+        "galleryText": "../assets/other/kirbyGalleryEntry.txt",
+        "articleText": "../assets/other/kirbyArticleText.txt"
+    }
+]

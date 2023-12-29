@@ -1,6 +1,6 @@
 const styles = {
-    paddingX: "xs:px-16 sm:px-16 px-6",
-    paddingY: "xs:px-16 sm:py-16 py-6",
+    paddingX: "xs:px-10 sm:px-10 px-6",
+    paddingY: "xs:px-10 sm:py-10 py-6",
     padding: "xs:px-16 sm:px-16 px-6 sm:py-16 py-10",
     textTitle: "font-homeSections font-semibold uppercase tracking-wider text-black-100",
     textBody: "font-bodySection font-medium text-black-100",

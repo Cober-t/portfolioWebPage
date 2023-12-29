@@ -7,6 +7,7 @@ import {
     videogameIcon,
     illustrationIcon,
     art3dIcon,
+    searchIcon,
 
     testSong,
 

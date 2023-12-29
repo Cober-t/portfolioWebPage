@@ -30,6 +30,8 @@ import art15 from "./illustration/test15.gif"
 
 import videogameDictPath from "./videogames/videogameDict.json"
 
+import searchIcon from "./icons/search.svg"
+
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -74,6 +76,7 @@ export {
   videogameIcon,
   otherIcon,
   art3dIcon,
+  searchIcon,
 
   testSong,
 
