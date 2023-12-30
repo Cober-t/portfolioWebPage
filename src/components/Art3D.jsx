@@ -1,97 +1,154 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
-
+// import Tilt from "react-parallax-tilt";
 import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants/constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { useState, useEffect } from "react";
+import { SectionWrapper } from '../hoc'
+import modelsList from "../assets/art3D/art3dDict.json"
 
-const ProjectCard = ({index, name, description, 
-	tags, image, source_code_link }) => {
+const ModelView = ({item, ...props}) => {
+	
+	const [modelItemText, setModelItemText] = useState("")
 
-	return (
+	
+	useEffect(() => {
+		
+		if (item && item.description) {
 
-		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-			<Tilt
-				options={{
-					max: 45,
-					scale: 1,
-					speed: 450,
-				}}
-				className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-			>
-				<div className='relative w-full h-[230px]'>
-					<img
-						src={image}
-						alt='project_image'
-						className='w-full h-full object-cover rounded-2xl'
-					/>
+				fetch(item.description)
+				.then(response => response.text())
+				.then(text => setModelItemText(text))
+			}
+	})
+	
+	if (item) {
+		
+		console.log(modelItemText)
+		const sliptData = modelItemText.split('-')
+		const description = sliptData[0]
+		const noteText = sliptData[1]
+		
+		return (
+			<div {...props}>
+				
+				<div className="xs:mb-10 xs:h-full md:w-full md:h-[500px] overflow-y-scroll no-scrollbar">
+					<p className="font-homeSections font-semibold uppercase text-[24px] text-gray-700 text-justify">
+						{item.title}
+					</p>
+					<div className="h-[0.1em] mb-2 w-full bg-black-100 inline-flex"/>
+					<p className="font-bodySection font-regular text-[16px] text-justify text-black-100 mb-5">
+						{description}
+					</p>
 
-					<div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-						<div
-							onClick={() => window.open(source_code_link, "_blank")}
-							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-						>
-							<img
-								src={github}
-								alt='source code'
-								className='w-1/2 h-1/2 object-contain'
-							/>
-						</div>
+					<p className="font-homeSections font-semibold uppercase text-[24px] text-justify text-gray-700">
+						ANEXO
+					</p>
+					<div className="h-[0.1em] mb-2 w-full bg-black-100 inline-flex"/>
+					<p className="font-bodySection font-regular text-[16px] text-justify text-black-100">
+						{noteText}
+					</p>
+				</div>
+
+				<div className="flex xs:flex-col md:flex-row w-full">
+					<div className="xs:h-[0.1em] xs:w-full xs:mb-5 md:ml-5 md:h-[500px] md:w-[0.1rem] bg-black-100 justify-center items-center"/>
+					<div className="flex xs:flex-row md:flex-col justify-center items-start 
+								relative z-10 gap-3 md:ml-5">
+
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+					</div>
+
+					<div className="flex xs:flex-row md:flex-col xs:items-start md:items-center justify-center
+							relative z-0 md:ml-10 md:mb-0 xs:mb-20
+							md:max-w-[450px] md:w-full">
+						<img src={item.previewImg} alt="Image not found"
+							className="xs:min-h-[450px]  md:h-fit md:w-full"/>
 					</div>
 				</div>
+			</div>
+		)
+	}
+}
 
-				<div className='mt-5'>
-					<h3 className='text-white font-bold text-[24px]'>{name}</h3>
-					<p className='mt-2 text-secondary text-[14px]'>{description}</p>
-				</div>
-
-				<div className='mt-4 flex flex-wrap gap-2'>
-					{tags.map((tag) => (
-						<p
-							key={`${name}-${tag.name}`}
-							className={`text-[14px] ${tag.color}`}
-						>
-							#{tag.name}
-						</p>
-					))}
-				</div>
-			</Tilt>
-		</motion.div>
+const ModelItem = ({item, ...props}) => {
+	
+	return (
+		<div {...props}>
+			
+			<div className="flex flex-row justify-end items-center
+				font-homeSections font-semibold xs:text-[18px] sm:text-[24px] text-gray-800">
+				{item.num}
+			</div>
+			<div className="flex justify-center items-center">
+				<img src={item.previewImg} alt="Image not found"
+					className="h-fit w-full"/>
+			</div>
+			<p className="text-start font-homeSections font-semibold xs:text-[18px] sm:text-[24px] text-gray-800 uppercase">
+				{item.title}
+			</p>
+			<p className="text-end font-homeSections font-regular xs:text-[12px] sm:text-[14px] text-gray-500 uppercase">
+				{item.date}
+			</p>
+		</div>
 	)
 }
 
 const Art3D = () => {
 
+	const [previewVisibility, setPreviewVisibility] = useState("hidden")
+	const [modelPreview, setModelPreview] = useState()
+
+	useEffect(()=> {
+
+		const handleEsc = (event) => {
+			if (event.key === 'Escape') {
+				setPreviewVisibility("hidden")
+			}
+		}
+			window.addEventListener('keydown', handleEsc);
+	 
+		return () => {
+			window.removeEventListener('keydown', handleEsc);
+		}
+
+	}, [])
+
+
 	return (
 		<>
-			<motion.div variants={textVariant()}>
-				<p className={`${styles.sectionSubText} `}>My work</p>
-				<h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-			</motion.div>
-
-			<div className='w-full flex'>
-				<motion.p
-					variants={fadeIn("", "", 0.1, 1)}
-					className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-				>
-					Following projects showcases my skills and experience through
-					real-world examples of my work. Each project is briefly described with
-					links to code repositories and live demos in it. It reflects my
-					ability to solve complex problems, work with different technologies,
-					and manage projects effectively.
-				</motion.p>
+			<div className={`${previewVisibility}`}>
+				<ModelView item={modelPreview} 
+					className="xs:h-full md:h-screen bg-primary select-none flex xs:flex-col md:flex-row xs:px-10 py-10"/>
 			</div>
 
-			<div className='justify-center mt-20 flex flex-wrap gap-7'>
-				{projects.map((project, index) => (
-					<ProjectCard key={`project-${index}`} index={index} {...project} />
-				))}
+			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} select-none`}>
+				<div className="overflow-x-scroll no-scrollbar h-screen w-screen
+					xs:py-10 xs:px-0 sm:px-[200px] xs:gap-[100px] md:gap-[150px] xs:justify-center sm:justify-start items-center bg-primary
+					grid sm:grid-flow-col sm:auto-cols-max">
+
+					{modelsList.map((item) => {
+						return (
+							<ModelItem 
+								item={item} 
+								className="flex flex-col" 
+								onDoubleClick={()=> {
+									setPreviewVisibility("block")
+									setModelPreview(item)}
+								}/>
+						)
+					})}
+				</div>
+
 			</div>
 		</>
 	)
 }
 
-export default SectionWrapper(Art3D, "art3d");
+export default SectionWrapper(Art3D, "art3d")

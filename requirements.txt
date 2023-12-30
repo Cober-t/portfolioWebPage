@@ -24,9 +24,9 @@ npm install --legacy-peer-deps react-player
     [ ] Pulish on layout and align center items
 
 [ ] Create 3D Art Section (3)
-    [ ] Create galery, progress bar and backgrounds
-    [ ] Import models, create layout
-    [ ] Add buttons to show animations, geometry, normals...
+    [X] Create galery, progress bar and backgrounds
+    [ ] Import models, and animations
+    [X] Create layout and add buttons to show animations, geometry...
 
 [ ] Create Ilustration page (3)
     [X] Upload gifs, comic, ilustration, animation
@@ -34,7 +34,7 @@ npm install --legacy-peer-deps react-player
     [X] Gifs, comic, ilustration and animation filters
     [ ] Preview image layout and scroll scale up or move drag
 
-[ ] Create other page (2)
+[ ] Create Other page (2)
     [X] Create galery with tags
     [X] Search and find articles
     [ ] Test embbed an html article layout (figma)

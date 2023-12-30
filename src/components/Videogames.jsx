@@ -126,7 +126,6 @@ const SubtitleComponent = ({videogame, ...props}) => {
 
 const VideogameItemList = ({videogame, previewImage, ...props}) => {
 
-
 	return (
 		<div
 			key={videogame.name}
