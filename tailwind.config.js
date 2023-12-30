@@ -50,6 +50,7 @@ module.exports = {
 			fontWeight: {
 				thin: '100',
 				regular: '300',
+				bold: '400',
 				semibold: '500',
 				extrabold: '800',
 			}
