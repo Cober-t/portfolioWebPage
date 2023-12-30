@@ -36,7 +36,7 @@ npm install --legacy-peer-deps react-player
 
 [ ] Create other page (2)
     [X] Create galery with tags
-    [ ] Search and find articles
+    [X] Search and find articles
     [ ] Test embbed an html article layout (figma)
     [x] Create article page and do the layout
     

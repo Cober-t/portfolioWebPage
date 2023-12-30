@@ -43,7 +43,7 @@ const ArticlePageTemplate = ({item, ...props}) => {
 						<p className='font-homeSections font-semibold text-[26px] sm:text-[28px] mb-2 text-black-100 inline-block'>
 							{title}
 						</p>
-						<p className='font-bodySection leading-normal font-regular text-[18px] sm:text-[20px] text-black-100 text-justify inline-block'>
+						<p className='font-bodySection leading-normal font-regular text-[16px] sm:text-[18px] text-black-100 text-justify inline-block'>
 							{subtitle}
 						</p>
 					</div>
@@ -53,7 +53,7 @@ const ArticlePageTemplate = ({item, ...props}) => {
 				<div className='flex w-full justify-center'>
 
 					
-					<div className='mb-20 mt-10 xs:px-10 sm:px-0 text-justify sm:text-[16px] inline-block max-w-[600px]'>
+					<div className='mb-20 mt-10 xs:px-10 sm:px-10 text-justify sm:text-[16px] inline-block max-w-[600px]'>
 						<p className='text-start font-homeSections uppercase font-bold xs:text-[12px] text-gray-400'>
 							{item.date}
 						</p>
@@ -123,6 +123,16 @@ const Other = () => {
 
 	const [galleryView, setGalleryView] = useState("hidden")
 	const [articleView, setArticleView] = useState()
+	const [findArticleActive, setFindArticleActive] = useState("hidden")
+
+	const [choosenTag, setChoosenTag] = useState('')
+	const handleTagValue = (event) => {
+		setChoosenTag(event.target.value)
+	}
+	const handleFindArticleActive = (event) => {
+		if (event.key == "Enter")
+			setFindArticleActive("hidden")
+	}
 
 	useEffect(()=> {
 
@@ -137,7 +147,7 @@ const Other = () => {
 			window.removeEventListener('keydown', handleEsc);
 		}
 
-	}, [])
+	}, [choosenTag])
 
 	return (
 		<>
@@ -148,25 +158,30 @@ const Other = () => {
 			<div className={`${galleryView == "block" ? "xs:hidden md:hidden" : "block"}`}>
 
 				<div className='flex justify-center items-center py-5'>
-					<img src={searchIcon} alt="Serch Icon not found" className='h-5 w-5' 
-						onClick={() => { console.log("Find an article") }}/>
+					<img src={searchIcon} alt="Serch Icon not found" 
+						className={`${findArticleActive == "hidden" ? "block" : "xs:hidden md:hidden"} h-5 w-5 `}
+						onClick={() => { setFindArticleActive("block") }}/>
+
+					<input type="text" id="choosenTag" placeholder='|...' onChange={handleTagValue} onKeyDown={handleFindArticleActive}
+						className={`${findArticleActive} max-w-[800px]`}/>
 				</div>
 
 				<div className="justify-center items-center w-full overflow-y-scroll overflow-x-scroll no-scrollbar
 					grid grid-flow-row xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5">
 
-						{otherArticleList.map((otherItem) => (
+						{otherArticleList.map((otherItem) => {
 
-							<GalleryItem
-								item={otherItem} 
-								className={`xs:px-3 select-none xs:w-screen mb-5 max-w-fit`}
-								onClick={()=> {
-									setGalleryView("block")
-									setArticleView(otherItem)
-								}}
-							/>
-
-						))}
+							let itemTags = otherItem.tags.trim().replace('#', '').split(',')
+							const articleItem = <GalleryItem item={otherItem} className={`xs:px-3 select-none xs:w-screen mb-5 max-w-fit`}
+													onDoubleClick={()=> {
+														setGalleryView("block")
+														setArticleView(otherItem)
+													}}/>
+							if (findArticleActive != "block" && choosenTag == '')
+								return articleItem
+							else if (itemTags.includes(choosenTag))
+								return articleItem
+						})}
 				</div>
 
 			</div>
