@@ -51,7 +51,6 @@ const ArticlePageTemplate = ({item, ...props}) => {
 				</div>
 
 				<div className='flex w-full justify-center'>
-
 					
 					<div className='mb-20 mt-10 xs:px-10 sm:px-10 text-justify sm:text-[16px] inline-block max-w-[600px]'>
 						<p className='text-start font-homeSections uppercase font-bold xs:text-[12px] text-gray-400'>
@@ -62,7 +61,6 @@ const ArticlePageTemplate = ({item, ...props}) => {
 						</p>
 						<p className='xs:text-[14px] sm:text-[16px] font-bold font-bodySection text-gray-800 leading-loose'>
 							{text}
-
 						</p>
 					</div>
 				</div>

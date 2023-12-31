@@ -30,7 +30,7 @@ const ModelView = ({item, ...props}) => {
 		return (
 			<div {...props}>
 				
-				<div className="xs:mb-10 xs:h-full md:w-full md:h-[500px] overflow-y-scroll no-scrollbar">
+				<div className="xs:h-full md:w-full md:h-screen items-center overflow-y-scroll no-scrollbar">
 					<p className="font-homeSections font-semibold uppercase text-[24px] text-gray-700 text-justify">
 						{item.title}
 					</p>
@@ -48,9 +48,9 @@ const ModelView = ({item, ...props}) => {
 					</p>
 				</div>
 
-				<div className="flex xs:flex-col md:flex-row w-full">
+				<div className="flex xs:flex-col md:flex-row w-full h-screen items-center">
 					<div className="xs:h-[0.1em] xs:w-full xs:mb-5 md:ml-5 md:h-[500px] md:w-[0.1rem] bg-black-100 justify-center items-center"/>
-					<div className="flex xs:flex-row md:flex-col justify-center items-start 
+					<div className="flex xs:flex-row md:flex-col justify-center items-center
 								relative z-10 gap-3 md:ml-5">
 
 						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
@@ -65,11 +65,10 @@ const ModelView = ({item, ...props}) => {
 							onClick={()=> {console.log(item.title)}}/>
 					</div>
 
-					<div className="flex xs:flex-row md:flex-col xs:items-start md:items-center justify-center
-							relative z-0 md:ml-10 md:mb-0 xs:mb-20
-							md:max-w-[450px] md:w-full">
+					<div className="flex xs:flex-row md:flex-col xs:items-start md:items-center justify-center w-full
+							relative z-0 md:ml-10">
 						<img src={item.previewImg} alt="Image not found"
-							className="xs:min-h-[450px]  md:h-fit md:w-full"/>
+							className="h-fit w-full object-contain"/>
 					</div>
 				</div>
 			</div>

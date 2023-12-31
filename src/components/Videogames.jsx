@@ -196,9 +196,12 @@ const Videogames = () => {
 					)}
 				</div>
 
-				<div className="flex items-center top-1/4 relative justify-center xs:hidden lg:block">
-					<img src={videogameImage} alt="Image not found"
-						className="px-5"/>
+				<div
+					style={{'--image-url': `url(${videogameImage})`}} 
+					className="flex justify-center xs:hidden lg:block
+						bg-[image:var(--image-url)] h-screen bg-cover bg-no-repeat bg-center">
+					{/* <img src={videogameImage} alt="Image not found"
+						className="px-5"/> */}
 				</div>
 			</div>	
 
