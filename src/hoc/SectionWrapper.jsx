@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 import { Navbar } from "../components";
-import { navLinks } from "../constants/constants";
+import { navLinks } from "../constants";
 
 
 const SectionWrapper = (Component, idName) =>

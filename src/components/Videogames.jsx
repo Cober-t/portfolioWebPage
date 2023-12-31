@@ -1,9 +1,8 @@
+import ReactPlayer from "react-player";
 import React, {useState, useEffect} from "react";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import videogameList from '../assets/videogames/videogameDict.json'
-import { musicPlay } from "../assets";
-import ReactPlayer from "react-player";
+import { videogameDictPath, musicPlay } from "../constants";
 
 
 const VideogamePreviewTemplate = ({videogame, ...props}) => {
@@ -155,11 +154,11 @@ const Videogames = () => {
 
 	useEffect(()=> {
 
-		setVideogameImage(videogameList[0].gameplayImg)
+		setVideogameImage(videogameDictPath[0].gameplayImg)
 
 		const handleEsc = (event) => {
 			if (event.key === 'Escape') {
-				setVideogameImage(videogameList[0].gameplayImg)
+				setVideogameImage(videogameDictPath[0].gameplayImg)
 				setPreviewVisibility("hidden")
 			}
 		}
@@ -181,7 +180,7 @@ const Videogames = () => {
 				h-screen md:grid gap-0 select-none`}>
 
 				<div className="overflow-y-scroll no-scrollbar">
-					{...videogameList.map((videogame) =>
+					{...videogameDictPath.map((videogame) =>
 
 						<VideogameItemList
 							videogame={videogame}

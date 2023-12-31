@@ -129,7 +129,7 @@ const Art3D = () => {
 
 			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} select-none`}>
 				<div className="overflow-x-scroll no-scrollbar h-screen w-screen
-					xs:py-10 xs:px-0 sm:px-[200px] xs:gap-[100px] md:gap-[150px] xs:justify-center sm:justify-start items-center bg-primary
+					xs:py-10 xs:px-0 sm:px-[200px] xs:gap-[100px] md:gap-[175px] xs:justify-center sm:justify-start items-center bg-primary
 					grid sm:grid-flow-col sm:auto-cols-max">
 
 					{modelsList.map((item) => {

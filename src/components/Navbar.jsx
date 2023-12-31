@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { navLinks, CustomLink, PrintIcons, DrawCurrentIcon, DrawNameSection } from '../constants/constants';
-import { logo } from '../assets';
+import { logo, navLinks, CustomLink, 
+    PrintIcons, DrawCurrentIcon, DrawNameSection } from '../constants';
 
 
 const Navbar = () => {

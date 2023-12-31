@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
-import { illutrationList, visible, hidden, animationFilter, comicFilter, photographFilter, illustrationFilter } from "../constants/constants"
-import { art1 } from "../assets"
+import { illustrationDictPath, visible, hidden, animationFilter, comicFilter, photographFilter, illustrationFilter } from "../constants"
 
 
 const ArtItem = ({artItem, filters, ...props}) => (
@@ -82,7 +81,7 @@ const Illustration = () => {
 
 				<div className="xs:columns-2 sm:columns-3 mr-10 ml-10 md:columns-4 gap-x-6">
 					
-					{illutrationList.map((artItem) => 
+					{illustrationDictPath.map((artItem) => 
 
 						<ArtItem artItem={artItem} filters={filterDict} className="py-3" onClick={()=> {setPreviewActive("visible"); setImagePreviewed(artItem.image)}}/>
 					)}

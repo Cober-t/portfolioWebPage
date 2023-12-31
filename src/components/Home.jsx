@@ -1,5 +1,5 @@
 import { Contact, Hero } from '.';
-import { navLinks, CustomLink } from '../constants/constants';
+import { navLinks, CustomLink } from '../constants';
 
 
 const Home = () => {

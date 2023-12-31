@@ -1,8 +1,6 @@
-import otherArticleList from '../assets/other/otherDict.json'
-
+import { otherDictPath, searchIcon } from '../constants'
 import { useState, useEffect } from 'react'
 import { SectionWrapper } from '../hoc'
-import { searchIcon } from '../assets'
 
 
 const ArticlePageTemplate = ({item, ...props}) => {
@@ -167,7 +165,7 @@ const Other = () => {
 				<div className="justify-center items-center w-full overflow-y-scroll overflow-x-scroll no-scrollbar
 					grid grid-flow-row xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5">
 
-						{otherArticleList.map((otherItem) => {
+						{otherDictPath.map((otherItem) => {
 
 							let itemTags = otherItem.tags.trim().replace('#', '').split(',')
 							const articleItem = <GalleryItem item={otherItem} className={`xs:px-3 select-none xs:w-screen mb-5 max-w-fit`}
