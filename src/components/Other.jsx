@@ -153,7 +153,7 @@ const Other = () => {
 
 			<div className={`${galleryView == "block" ? "xs:hidden md:hidden" : "block"}`}>
 
-				<div className='flex justify-center items-center py-5'>
+				<div className='flex justify-center items-center py-5 pt-[100px]'>
 					<img src={searchIcon} alt="Serch Icon not found" 
 						className={`${findArticleActive == "hidden" ? "block" : "xs:hidden md:hidden"} h-5 w-5 `}
 						onClick={() => { setFindArticleActive("block") }}/>

@@ -65,7 +65,7 @@ const Illustration = () => {
 				onClick={()=> {setPreviewActive("invisible")}} 
 				className={`${previewActive} select-none w-full h-full bg-gray-300 fixed z-10 opacity-75`}/>
 
-			<div className="select-none overflow-y-scroll no-scrollbar">
+			<div className="select-none overflow-y-scroll no-scrollbar pt-[80px]">
 
 				<div className={`${styles.paddingX} ${styles.paddingY} w-full justify-center grid xs:grid-cols-2 md:grid-cols-4 items-center bg-backgroundColor`}> 
 					

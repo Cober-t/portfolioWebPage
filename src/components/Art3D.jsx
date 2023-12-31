@@ -30,7 +30,7 @@ const ModelView = ({item, ...props}) => {
 		return (
 			<div {...props}>
 				
-				<div className="xs:h-full md:w-full md:h-screen items-center overflow-y-scroll no-scrollbar">
+				<div className="xs:h-full md:max-h-[550px] md:h-screen w-full overflow-y-scroll no-scrollbar xs:pt-[100px] md:py-[50px] md:mt-0">
 					<p className="font-homeSections font-semibold uppercase text-[24px] text-gray-700 text-justify">
 						{item.title}
 					</p>
@@ -42,34 +42,37 @@ const ModelView = ({item, ...props}) => {
 					<p className="font-homeSections font-semibold uppercase text-[24px] text-justify text-gray-700">
 						ANEXO
 					</p>
-					<div className="h-[0.1em] mb-2 w-full bg-black-100 inline-flex"/>
+					<div className="h-[0.1em] w-full bg-black-100 inline-flex"/>
 					<p className="font-bodySection font-regular text-[16px] text-justify text-black-100">
 						{noteText}
 					</p>
 				</div>
 
-				<div className="flex xs:flex-col md:flex-row w-full h-screen items-center">
-					<div className="xs:h-[0.1em] xs:w-full xs:mb-5 md:ml-5 md:h-[500px] md:w-[0.1rem] bg-black-100 justify-center items-center"/>
-					<div className="flex xs:flex-row md:flex-col justify-center items-center
-								relative z-10 gap-3 md:ml-5">
+				<div className="flex xs:flex-col md:flex-row w-full xs:h-full md:h-screen items-center ">
+					<div className="xs:h-[0.1em] xs:w-full md:h-[500px] md:w-[0.1rem] bg-black-100 justify-center items-center
+						md:ml-5 mt-10"/>
 
-						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-					</div>
-
-					<div className="flex xs:flex-row md:flex-col xs:items-start md:items-center justify-center w-full
+					<div className="flex xs:flex-row md:flex-col items-center justify-center
 							relative z-0 md:ml-10">
 						<img src={item.previewImg} alt="Image not found"
-							className="h-fit w-full object-contain"/>
+							className="h-screen w-screen object-contain scale-90 md:pt-[50px]"/>
 					</div>
+
+					<div className="flex xs:flex-row md:flex-col justify-center items-center
+								relative z-10 gap-3 md:ml-5 xs:mb-20 md:mb-0">
+
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
+							onClick={()=> {console.log(item.title)}}/>
+					</div>
+
 				</div>
 			</div>
 		)
@@ -87,7 +90,7 @@ const ModelItem = ({item, ...props}) => {
 			</div>
 			<div className="flex justify-center items-center">
 				<img src={item.previewImg} alt="Image not found"
-					className="h-fit w-full"/>
+					className="h-full w-full object-contain scale-125"/>
 			</div>
 			<p className="text-start font-homeSections font-semibold xs:text-[18px] sm:text-[24px] text-gray-800 uppercase">
 				{item.title}
@@ -124,12 +127,12 @@ const Art3D = () => {
 		<>
 			<div className={`${previewVisibility}`}>
 				<ModelView item={modelPreview} 
-					className="xs:h-full md:h-screen bg-primary select-none flex xs:flex-col md:flex-row xs:px-10 py-10"/>
+					className="bg-primary select-none flex xs:flex-col md:flex-row xs:px-10 items-center"/>
 			</div>
 
 			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} select-none`}>
 				<div className="overflow-x-scroll no-scrollbar h-screen w-screen
-					xs:py-10 xs:px-0 sm:px-[200px] xs:gap-[100px] md:gap-[175px] xs:justify-center sm:justify-start items-center bg-primary
+					xs:py-[100px] xs:px-0 sm:px-[200px] xs:gap-[100px] md:gap-[150px] xs:justify-center sm:justify-start items-center bg-primary
 					grid sm:grid-flow-col sm:auto-cols-max">
 
 					{modelsList.map((item) => {

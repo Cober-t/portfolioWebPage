@@ -13,7 +13,6 @@ const SectionWrapper = (Component, idName) =>
         return (
 
             <div>
-                <Navbar/>
 
                 {/* <motion.section
                     variants={staggerContainer()}
@@ -27,6 +26,8 @@ const SectionWrapper = (Component, idName) =>
                     </span> */}
 
                 <div className={`relative z-0 bg-backgroundColor overflow-none`}>
+                    <Navbar/>
+
                     <Component/>
                 </div>
                     
