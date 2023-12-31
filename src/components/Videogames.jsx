@@ -172,7 +172,7 @@ const Videogames = () => {
 
 	return (
 		<>
-			<div className={`${previewVisibility} bg-primary select-none`}>
+			<div className={`${previewVisibility} bg-primary select-none pt-[73px]`}>
 				<VideogamePreviewTemplate videogame={videogamePreview}/>
 			</div>
 
