@@ -18,10 +18,10 @@ npm install --legacy-peer-deps react-player
     [x] Make layout, unfold listed songs on scroll
     [x] Play and stop music
 
-[ ] Create Videogames Sections (2)
+[X] Create Videogames Sections (2)
     [X] Create scroll videogames, gallery and preview
     [X] Videogame page layout, upload video, gif or links
-    [ ] Pulish on layout and align center items
+    [X] Pulish layout and align center items
 
 [ ] Create 3D Art Section (3)
     [X] Create galery, progress bar and backgrounds

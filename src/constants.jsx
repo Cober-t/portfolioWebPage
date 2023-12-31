@@ -56,7 +56,7 @@ export function DrawNameSection({identifier, object}) {
         )
 }
 
-const style= "ps-10 xs:text-[48px] text-[48px] uppercase text-black-100 "
+const style= "select-none xs:pl-6 md:pl-[50px] xs:text-[48px] md:text-[62px] uppercase text-black-100"
 export const navLinks = [
     {
         id: "/music",

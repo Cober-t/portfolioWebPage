@@ -179,7 +179,7 @@ const Videogames = () => {
 			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} grid xs:grid-cols-1 lg:grid-cols-2
 				h-screen md:grid gap-0 select-none`}>
 
-				<div className="overflow-y-scroll no-scrollbar mt-20">
+				<div className="overflow-y-scroll no-scrollbar pt-[73px]">
 					{...videogameDictPath.map((videogame) =>
 
 						<VideogameItemList
