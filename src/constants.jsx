@@ -1,5 +1,6 @@
-
 import { useMatch, useLocation, useResolvedPath, Link } from 'react-router-dom';
+import { useProgress } from '@react-three/drei';
+
 
 export function CustomLink({ to, uniqueKey, children, ...props }) {
     
@@ -95,6 +96,37 @@ export const navLinks = [
     },
 ];
 
+function ModelLoader() {
+    const { active, progress, errors, item, loaded, total } = useProgress()
+
+    const reference = useRef()
+
+    if(loadingBarElement != null && reference != undefined)
+    {
+        if(loaded)
+        {
+            window.setTimeout(() => {
+                gsap.to(
+                    reference.material.opacity, 
+                    { duration: 3 , value: 0, delay: 1 })   
+                // Update loadingBarElement
+                loadingBarElement.classList.add('ended')
+                loadingBarElement.style.transform = ''  
+            }, 500)
+        }
+        if (progress)
+            loadingBarElement.style.transform = `scaleX(${progress})`
+    }
+
+    return <>
+        <mesh position={[0, 0, 0]} scale={[2, 3, 2]} rotation-x={Math.PI*0.5} rotation-z={Math.PI*0.5} rotation-y={-Math.PI/1.5}>
+            <planeBufferGeometry attach="geometry" args={[25, 15]} />
+            <meshBasicMaterial attach="material" color="black" transparent={true} />
+        </mesh>
+    </>
+    // return <Html center>{progress} % loaded</Html>
+}
+
 // # CONSTANTS
 export const animationFilter = "animation"
 export const photographFilter = "photograph"
@@ -137,4 +169,6 @@ export {
   otherDictPath,
   illustrationDictPath,
   art3dDictPath,
+
+  ModelLoader
 }

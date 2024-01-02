@@ -39,9 +39,9 @@ const Navbar = () => {
                 {/*========  SECTION ICONS  ========*/}
                 <div className='md:flex absolute right-0 px-10 gap-4 gap-y-1 xs:grid xs:grid-cols-2'>
 
-                        {navLinks.map((link) => (
-                            <PrintIcons identifier={link.id} object={link}/>
-                        ))}
+                    {navLinks.map((link) => (
+                        <PrintIcons identifier={link.id} object={link}/>
+                    ))}
                 </div>
 
             </nav>

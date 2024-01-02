@@ -7,6 +7,9 @@ npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-
 npm install --save-dev tailwind-scrollbar
 npm install --legacy-peer-deps eslint-plugin-react-hooks
 npm install --legacy-peer-deps react-player
+npm install leva (debugging)
+npm install r3f-perf (monitoring)
+
 
 
 #       MILESTONES
