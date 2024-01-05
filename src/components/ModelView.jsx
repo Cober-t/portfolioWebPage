@@ -1,4 +1,3 @@
-import { useAnimations, useGLTF } from '@react-three/drei'
 import { useState, useEffect, useRef } from 'react';
 import React from 'react'
 import { Suspense } from 'react';
@@ -8,28 +7,19 @@ import { Preload } from '@react-three/drei'
 import { Canvas } from "@react-three/fiber";
 import Camera from "./canvas/Camera";
 import Lights from "./canvas/Lights";
+import Model from './Model';
 
-function Model(body) {
 
-	const model = useGLTF('./Fox/glTF/Fox.gltf')
-    const animations = useAnimations(model.animations, model.scene)
-	animations.actions['Survey'].play()
-	
-	return (
-		<primitive castShadow receiveShadow 
-				object={model.scene} 
-				scale={0.05}
-				position={[0, -2, 0]}/>
-	)
-}
 
 export default function ModelView({item}) {
 	
 	const [modelItemText, setModelItemText] = useState("")
+	const [currentAnimation, setCurrentAnimation] = useState("Survey")
+	const [currentMaterial, setCurrentMaterial] = useState('')
+	const [enableLights, setEnableLights] = useState(true)
 	
 	const body = useRef()
 
-	
 	useEffect(() => {
 		
 		if (item && item.description) {
@@ -47,9 +37,9 @@ export default function ModelView({item}) {
 		const noteText = sliptData[1]
 		
 		return (
-			<section className="bg-primary select-none flex xs:flex-col md:flex-row xs:px-10 items-center">
+			<section className="bg-primary select-none flex xs:flex-col md:flex-col lg:flex-row xs:px-10 items-center">
 				
-				<div className="xs:h-full md:max-h-[550px] md:h-screen w-full overflow-y-scroll no-scrollbar xs:pt-[100px] md:py-[50px] md:mt-0">
+				<div className="xs:h-full md:max-h-[550px] md:h-screen w-full overflow-y-scroll no-scrollbar xs:pt-[100px] md:pt-[100px] lg:mt-[20px] lg:mb-[30px]">
 					<p className="font-homeSections font-semibold uppercase text-[24px] text-gray-700 text-justify">
 						{item.title}
 					</p>
@@ -67,51 +57,59 @@ export default function ModelView({item}) {
 					</p>
 				</div>
 
-				<div className="flex xs:flex-col md:flex-row w-full xs:h-full md:h-screen items-center ">
-					<div className="xs:h-[0.1em] xs:w-full md:h-[500px] md:w-[0.1rem] bg-black-100 md:ml-5 mt-10"/>
+				<div className="flex xs:flex-col md:flex-col lg:flex-row w-full xs:h-full md:h-screen items-center">
+					<div className="xs:h-[0.1em] xs:w-full md:h-[0.1em] md:w-full lg:h-[500px] lg:w-[0.1rem] bg-black-100 md:ml-5 mt-5"/>
 
-					<div className="flex xs:flex-row md:flex-col items-center justify-start
-							relative z-0 md:ml-10 bg-red-300 h-screen min-w-[450px]">
+					<div className="flex-1 xs:flex-row md:flex-col items-center justify-start
+							relative z-0 lg:ml-5 h-screen">
 
-						<Canvas shadows frameloop='demand' dpr={ [1, 2] } // clamp pixel ratio (default)
-							gl={ {antialias:true, // default preserveDrawingBuffer: true,
-								// toneMapping: THREE.ACESFilmicToneMapping,
-								outputEncoding: THREE.sRGBEncoding // THREE.ColorManagement.legacyMode = false
-							} } //camera={{ position: [20, 3, 5], fov: 25 }}
+						<Canvas shadows dpr={ [1, 3] } // clamp pixel ratio (default)
+							gl={ {antialias: true, preserveDrawingBuffer: true,
+								toneMapping: THREE.ACESFilmicToneMapping,
+								} }
       						>
 							<Camera />
-							<Lights />
-							<Suspense fallback={<ModelLoader/>}/*fallback={ <Placeholder position-y={0.5} scale={ [2, 3, 2] }*/>  
 							
-								<Model body={body}/>
+							<Lights enable={enableLights}/>
+							<Suspense fallback={null}>
+							{/* <Suspense fallback={ <ModelLoader position-y={0.5} scale={ [2, 3, 2] }/> }> */}
+							
+								<Model body={body} animation={currentAnimation} mat={currentMaterial}/>
 								
 							</Suspense>
 							
-							<Preload all />
+							{/* <Preload all /> */}
 
 						</Canvas>
-						{/* <img src={item.previewImg} alt="Image not found"
-							className="h-screen w-screen object-contain scale-90 md:pt-[50px]"/> */}
+
 					</div>
 
-					<div className="flex xs:flex-row md:flex-col items-center justify-end
-								relative z-10 gap-3 md:ml-5 xs:mb-20 md:mb-0">
+					<div className="flex xs:flex-row md:flex-row lg:flex-col items-center justify-end
+								relative z-10 gap-3 md:ml-5 xs:mb-20 md:mb-20 lg:mb-0">
 
 						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
-							onClick={()=> {console.log(item.title)}}/>
-						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
-							onClick={()=> {
-								console.log(item.title)
-								// animations.actions['Walk'].reset().fadeIn(0.5).play()
+							onClick={()=> { 
+								setEnableLights( enableLights == true ? false : true ) 
 							}}/>
+
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> { 
+								setCurrentMaterial( currentMaterial == "wireframe" ? "" : "wireframe") 
+							}}/>
+
+						<a target="_blank" className="bg-gray-500 hover:bg-gray-600 h-6 w-6 rounded-full"
+							onClick={()=> { 
+								setCurrentMaterial( currentMaterial == "bones" ? "" : "bones") 
+							}}/>
+
 						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
-							onClick={()=> {
-								console.log(item.title)
-								// animations.actions['Survey'].reset().fadeIn(0.5).play()
+							onClick={()=> { 
+								setCurrentAnimation(currentAnimation == "Walk" ? "Survey" : "Walk") 
+							}}/>
+
+						<a target="_blank" className="bg-amber-600 hover:bg-amber-700 h-6 w-6 rounded-full"
+							onClick={()=> { 
+								setCurrentAnimation(currentAnimation == "Run" ? "Survey" : "Run") 
 							}}/>
 					</div>
 
@@ -120,4 +118,3 @@ export default function ModelView({item}) {
 		)
 	}
 }
-useGLTF.preload('./Fox/glTF/Fox.gltf')

@@ -17,27 +17,27 @@ npm install r3f-perf (monitoring)
 [X] Create main pages structure and link them
 [X] Create Nav Bar
 
-[x] Crate music section (1)
+[x] Crate music section
     [x] Make layout, unfold listed songs on scroll
     [x] Play and stop music
 
-[X] Create Videogames Sections (2)
+[X] Create Videogames Sections
     [X] Create scroll videogames, gallery and preview
     [X] Videogame page layout, upload video, gif or links
     [X] Pulish layout and align center items
 
-[ ] Create 3D Art Section (3)
+[X] Create 3D Art Section
     [X] Create galery, progress bar and backgrounds
-    [ ] Import models, and animations
+    [X] Import models, and animations
     [X] Create layout and add buttons to show animations, geometry...
 
-[ ] Create Ilustration page (3)
+[ ] Create Ilustration page
     [X] Upload gifs, comic, ilustration, animation
     [X] Learn to reorder items
     [X] Gifs, comic, ilustration and animation filters
     [ ] Preview image layout and scroll scale up or move drag
 
-[ ] Create Other page (2)
+[ ] Create Other page
     [X] Create galery with tags
     [X] Search and find articles
     [ ] Test embbed an html article layout (figma)
@@ -45,7 +45,8 @@ npm install r3f-perf (monitoring)
     
 [x] Create Subscribe button and send emails
 [x] Get Resources from a JSON
+[ ] Clean up and fill web with test content
 [ ] Create Newsletter Telegram bot
-[ ] Global portfolio filter (1)
-[ ] Create Icons for sections and menu (1)
-[ ] Visual feedback and animationn (4)
+[ ] Global portfolio filter
+[ ] Create Icons for sections and menu
+[ ] Visual feedback and animationn
