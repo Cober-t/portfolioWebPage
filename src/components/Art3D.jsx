@@ -55,11 +55,12 @@ const Art3D = () => {
 				<ModelView item={modelPreview}/>
 			</div>
 
-			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} select-none`}>
-				<div className="overflow-x-scroll no-scrollbar h-screen w-screen
-					xs:py-[100px] xs:px-0 sm:px-[200px] xs:gap-[100px] md:gap-[150px] xs:justify-center sm:justify-start items-center bg-primary
-					grid sm:grid-flow-col sm:auto-cols-max">
+			<div className={`${previewVisibility == "block" ? "xs:hidden md:hidden" : "block"} select-none items-end
+				overflow-x-scroll no-scrollbar h-screen w-screen bg-primary`}>
 
+				<div className="xs:overflow-y-scroll xs:overflow-x-hidden sm:overflow-y-hidden sm:overflow-x-scroll xs:h-full sm:h-fit
+				xs:py-[100px] sm:pt-[175px] pb-[50px] xs:px-0 xs:gap-[100px] sm:px-[100px] md:gap-[150px] grid sm:grid-flow-col sm:auto-cols-max
+				xs:justify-center sm:justify-start">
 					{modelsList.map((item) => {
 						return (
 							<ModelItem 
@@ -74,6 +75,7 @@ const Art3D = () => {
 				</div>
 
 			</div>
+
 		</>
 	)
 }
