@@ -60,7 +60,7 @@ const Art3D = () => {
 
 				<div className="xs:overflow-y-scroll xs:overflow-x-hidden sm:overflow-y-hidden sm:overflow-x-scroll xs:h-full sm:h-fit
 				xs:py-[100px] sm:pt-[175px] pb-[50px] xs:px-0 xs:gap-[100px] sm:px-[100px] md:gap-[150px] grid sm:grid-flow-col sm:auto-cols-max
-				xs:justify-center sm:justify-start">
+				xs:justify-center sm:justify-start scroll">
 					{modelsList.map((item) => {
 						return (
 							<ModelItem 
