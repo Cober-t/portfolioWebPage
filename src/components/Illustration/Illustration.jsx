@@ -3,40 +3,11 @@ import { styles } from "../../styles"
 import { visible, hidden, animationFilter, comicFilter, photographFilter, illustrationFilter } from "../../constants"
 
 
-const ArtItem = ({artItem, filters, ...props}) => (
-	
-	filters.map((filter) => {
-		
-		if (artItem.tag === filter.tag && filter.value == visible)
-			return <img src={artItem.image} {...props} />
-	})
-)
-
-
-// const ArtItem = ({artItem, filters, ...props}) => {
-
-// 	var items = []
-	
-// 	const itemTemplate = ({filterName, artImage}) => {
-// 		<ul key={filterName}>
-// 			<img src={artImage} {...props} />
-// 		</ul>
-// 	}
-
-// 	filters.map((filter) => {
-
-// 		if (artItem.tag === filter.tag && filter.value == visible) 
-// 			items.push(itemTemplate(filter.name, artItem.image))
-// 	})
-
-// 	return items
-// }
-
-
 const Illustration = ({data}) => {
 	
 	const [imagePreviewd, setImagePreviewed] = useState(null)
 	const [previewActive, setPreviewActive] = useState("invisible")
+	const [filtersEnable, setFiltersEnable] = useState()
 	const [filterDict, setFiltersDict] = useState([
 		{ tag: animationFilter,    value: visible, color: "text-purple-500"},
 		{ tag: comicFilter, 	   value: visible, color: "text-red-500"},
@@ -45,6 +16,8 @@ const Illustration = ({data}) => {
 	])
 	
 	useEffect(() => {
+
+		setFiltersEnable(filterDict.filter((f) => f.value == visible).map(({tag}) => tag))
 
 		const handleEsc = (event) => {
 		   if (event.key === 'Escape')
@@ -68,6 +41,7 @@ const Illustration = ({data}) => {
 			filterDict[index].value = filter.value == visible ? hidden : visible ] 
 		)
 		setFiltersDict([...filterDict])
+		setFiltersEnable(filterDict.filter((f) => f.value == visible).map(({tag}) => tag))
 	}
 	
 	return (
@@ -90,8 +64,8 @@ const Illustration = ({data}) => {
 				<div className={`${styles.paddingX} ${styles.paddingY} w-full justify-center grid xs:grid-cols-2 md:grid-cols-4 items-center bg-backgroundColor`}> 
 					
 					{filterDict.map((filter, index) => 
-						<button key={index}
-							type="button" onClick={ ()=> (disableFilter(filter, index)) }
+						<button key={index} type="button" 
+							onClick={ ()=> ( disableFilter(filter, index)) }
 							className={`${filter.color} hover:opacity-75 ${setOpacity(index)} text-md font-medium ${styles.textTitle} uppercase`}>
 								#{filter.tag}
 						</button>
@@ -103,12 +77,14 @@ const Illustration = ({data}) => {
 					
 					{data && data.map((artItem) => 
 						<li key={artItem.name} className="list-none">
-							<ArtItem artItem={artItem} filters={filterDict} 
-								className="py-3" 
-								onClick={()=> {
-									setPreviewActive("visible")
-									setImagePreviewed(artItem.image)
-								}}/>
+							{
+								filtersEnable && filtersEnable.includes(artItem.tag) &&
+								<img src={artItem.image} className="py-3" 
+										onClick={()=> {
+											setPreviewActive("visible")
+											setImagePreviewed(artItem.image)
+										}} />
+							}
 						</li>
 					)}
 
