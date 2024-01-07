@@ -9,6 +9,7 @@ npm install --legacy-peer-deps eslint-plugin-react-hooks
 npm install --legacy-peer-deps react-player
 npm install leva (debugging)
 npm install r3f-perf (monitoring)
+npm install react-query
 
 
 
@@ -46,6 +47,11 @@ npm install r3f-perf (monitoring)
 [x] Create Subscribe button and send emails
 [x] Get Resources from a JSON
 [ ] Clean up and fill web with test content
+[ ] Better view on illustration preview
+[ ] Center items on videogames
+[ ] Preload music duration
+[ ] Fetch only visible items
+
 [ ] Create Newsletter Telegram bot
 [ ] Global portfolio filter
 [ ] Create Icons for sections and menu

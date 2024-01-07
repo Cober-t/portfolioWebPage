@@ -6,7 +6,7 @@ const Home = () => {
 
 	return (
 
-		<section className="relative z-0 bg-backgroundColor">
+		<section className="relative z-0 bg-backgroundColor select-none">
 
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 				<Hero />

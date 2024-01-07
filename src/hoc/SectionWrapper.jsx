@@ -1,39 +1,65 @@
+import React, { Suspense, useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { staggerContainer } from "../utils/motion";
-import { Navbar } from "../components";
-import { navLinks } from "../constants";
+import Navbar from '../components/Navbar';
 
+const Transition = () => {
 
-const SectionWrapper = (Component, idName) =>
+    return (
+        <>
+            <motion.div
+                className="slide-in"
+                initial={{ scaleY: 1 }}
+                animate={{ scaleY: 0 }}
+                exit={{ scaleY: 0 }}
+                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            /> 
+            <motion.div
+                className="slide-out"
+                initial={{ scaleY: 1 }}
+                animate={{ scaleY: 0 }}
+                exit={{ scaleY: 0 }}
+                transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+            />
+        </>
+    )
+}
 
-    function HOC() {
+function SectionWrapper(Component, path) {
+    
+    const [data, setData] = useState()
+    const [isLoaded, setIsLoaded] = useState(false);
+    
+    useEffect(() => {
+        
+        fetch(path)
+        .then((response) => response.json())
+        .then((data) => {
+            setData(data) 
+            setIsLoaded(true)
+        });
+    }, []);
 
+    if (isLoaded) {
         return (
-
-            <div>
-
-                {/* <motion.section
-                    variants={staggerContainer()}
-                    initial='hidden'
-                    whileInView='show'
-                    viewport={{ once: true, amount: 0.25 }}
-                    className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
-                    >
-                    <span className='hash-span' id={idName}>
-                        &nbsp;
-                    </span> */}
-
+            // <Suspense fallback={<div className="w-screen h-screen flex text-[42px] items-center justify-center text-black-100 bg-backgroundColor"> 
+            //                         LOADING 
+            //                     </div>}>
                 <div className={`relative z-0 bg-backgroundColor overflow-none`}>
                     <Navbar/>
-
-                    <Component/>
+                    <Component data={data}/>
                 </div>
-                    
-                {/* </motion.section> */}
+            // </Suspense>
+        )
+    }
+    else {
+        return (
+            // <Transition />
+            <div className="w-screen h-screen flex text-[42px] items-center justify-center text-black-100 bg-backgroundColor"> 
+                LOADING .... 
             </div>
         )
     }
+}
 
 export default SectionWrapper;

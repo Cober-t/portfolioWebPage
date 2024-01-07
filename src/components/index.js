@@ -1,11 +1,11 @@
 import Home from './Home';
 import Hero from './Hero';
 import Navbar from './Navbar';
-import Illustration from './Illustration';
-import Music from './Music';
-import Other from './Other';
-import Art3D from './Art3D';
-import Videogames from './Videogames';
+import Illustration from './Illustration/Illustration';
+import Music from './Music/Music';
+import Other from './Other/Other';
+import Art3D from './Art3D/Art3D';
+import Videogames from './Videogames/Videogames';
 import Contact from './Contact';
 
 export {

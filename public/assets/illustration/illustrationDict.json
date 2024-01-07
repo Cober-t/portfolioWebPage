@@ -1,91 +1,91 @@
 [
     {
-        "title": "Photograph 1",
-        "image": "../assets/illustration/test1.jpg",
+        "name": "Photograph 1",
+        "image": "/assets/illustration/test1.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
-        "title": "Photograph 2",
-        "image": "../assets/illustration/test2.jpg",
+        "name": "Photograph 2",
+        "image": "/assets/illustration/test2.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
-        "title": "Illustration 1",
-        "image": "../assets/illustration/test3.jpg",
+        "name": "Illustration 1",
+        "image": "/assets/illustration/test3.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
-        "title": "Illustration 2",
-        "image": "../assets/illustration/test4.jpg",
+        "name": "Illustration 2",
+        "image": "/assets/illustration/test4.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
-        "title": "Photograph 3",
-        "image": "../assets/illustration/test5.jpg",
+        "name": "Photograph 3",
+        "image": "/assets/illustration/test5.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
-        "title": "Comic 1",
-        "image": "../assets/illustration/test6.jpg",
+        "name": "Comic 1",
+        "image": "/assets/illustration/test6.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
-        "title": "Illustration 3",
-        "image": "../assets/illustration/test7.jpg",
+        "name": "Illustration 3",
+        "image": "/assets/illustration/test7.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
-        "title": "Illustration 4",
-        "image": "../assets/illustration/test8.jpg",
+        "name": "Illustration 4",
+        "image": "/assets/illustration/test8.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
-        "title": "Illustration 5",
-        "image": "../assets/illustration/test9.jpg",
+        "name": "Illustration 5",
+        "image": "/assets/illustration/test9.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
-        "title": "Comic 2",
-        "image": "../assets/illustration/test10.jpg",
+        "name": "Comic 2",
+        "image": "/assets/illustration/test10.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
-        "title": "Comic 3",
-        "image": "../assets/illustration/test11.jpg",
+        "name": "Comic 3",
+        "image": "/assets/illustration/test11.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
-        "title": "Photograph 4",
-        "image": "../assets/illustration/test12.jpg",
+        "name": "Photograph 4",
+        "image": "/assets/illustration/test12.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
-        "title": "Comic 4",
-        "image": "../assets/illustration/test13.jpg",
+        "name": "Comic 4",
+        "image": "/assets/illustration/test13.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
-        "title": "Animation 1",
-        "image": "../assets/illustration/test14.gif",
+        "name": "Animation 1",
+        "image": "/assets/illustration/test14.gif",
         "tag": "animation",
         "date": "26/10/2023"
     },
     {
-        "title": "Animation 2",
-        "image": "../assets/illustration/test15.gif",
+        "name": "Animation 2",
+        "image": "/assets/illustration/test15.gif",
         "tag": "animation",
         "date": "26/10/2023"
     }
