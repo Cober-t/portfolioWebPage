@@ -1,91 +1,91 @@
 [
     {
         "name": "Photograph 1",
-        "image": "/assets/illustration/test1.jpg",
+        "image": "./dict/assets/illustration/test1.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
         "name": "Photograph 2",
-        "image": "/assets/illustration/test2.jpg",
+        "image": "./dict/assets/illustration/test2.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
         "name": "Illustration 1",
-        "image": "/assets/illustration/test3.jpg",
+        "image": "./dict/assets/illustration/test3.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
         "name": "Illustration 2",
-        "image": "/assets/illustration/test4.jpg",
+        "image": "./dict/assets/illustration/test4.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
         "name": "Photograph 3",
-        "image": "/assets/illustration/test5.jpg",
+        "image": "./dict/assets/illustration/test5.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
         "name": "Comic 1",
-        "image": "/assets/illustration/test6.jpg",
+        "image": "./dict/assets/illustration/test6.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
         "name": "Illustration 3",
-        "image": "/assets/illustration/test7.jpg",
+        "image": "./dict/assets/illustration/test7.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
         "name": "Illustration 4",
-        "image": "/assets/illustration/test8.jpg",
+        "image": "./dict/assets/illustration/test8.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
         "name": "Illustration 5",
-        "image": "/assets/illustration/test9.jpg",
+        "image": "./dict/assets/illustration/test9.jpg",
         "tag": "illustration",
         "date": "26/10/2023"
     },
     {
         "name": "Comic 2",
-        "image": "/assets/illustration/test10.jpg",
+        "image": "./dict/assets/illustration/test10.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
         "name": "Comic 3",
-        "image": "/assets/illustration/test11.jpg",
+        "image": "./dict/assets/illustration/test11.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
         "name": "Photograph 4",
-        "image": "/assets/illustration/test12.jpg",
+        "image": "./dict/assets/illustration/test12.jpg",
         "tag": "photograph",
         "date": "26/10/2023"
     },
     {
         "name": "Comic 4",
-        "image": "/assets/illustration/test13.jpg",
+        "image": "./dict/assets/illustration/test13.jpg",
         "tag": "comic",
         "date": "26/10/2023"
     },
     {
         "name": "Animation 1",
-        "image": "/assets/illustration/test14.gif",
+        "image": "./dict/assets/illustration/test14.gif",
         "tag": "animation",
         "date": "26/10/2023"
     },
     {
         "name": "Animation 2",
-        "image": "/assets/illustration/test15.gif",
+        "image": "./dict/assets/illustration/test15.gif",
         "tag": "animation",
         "date": "26/10/2023"
     }

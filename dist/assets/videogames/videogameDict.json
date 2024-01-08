@@ -6,12 +6,12 @@
         "timeToComplete": "23",
         "skillLevel": "4/5",
         "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "gameplayImg": "./dict/assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "./dict/assets/videogames/hollowKnightCover.jpg",
+        "trailer": "./dict/assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
+        "description": "./dict/assets/videogames/hollowKnightDescription.txt"
     },
     {
         "name": "Dead Cells",
@@ -20,12 +20,12 @@
         "timeToComplete": "23",
         "skillLevel": "4/5",
         "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "gameplayImg": "./dict/assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "./dict/assets/videogames/hollowKnightCover.jpg",
+        "trailer": "./dict/assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
+        "description": "./dict/assets/videogames/hollowKnightDescription.txt"
     },
     {
         "name": "The Witness",
@@ -34,12 +34,12 @@
         "timeToComplete": "50",
         "skillLevel": "4/5",
         "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "gameplayImg": "./dict/assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "./dict/assets/videogames/hollowKnightCover.jpg",
+        "trailer": "./dict/assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
+        "description": "./dict/assets/videogames/hollowKnightDescription.txt"
     },
     {
         "name": "Fez",
@@ -48,12 +48,12 @@
         "timeToComplete": "23",
         "skillLevel": "4/5",
         "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "gameplayImg": "./dict/assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "./dict/assets/videogames/hollowKnightCover.jpg",
+        "trailer": "./dict/assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
+        "description": "./dict/assets/videogames/hollowKnightDescription.txt"
     },
     {
         "name": "Inside",
@@ -62,12 +62,12 @@
         "timeToComplete": "23",
         "skillLevel": "4/5",
         "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "gameplayImg": "./dict/assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "./dict/assets/videogames/hollowKnightCover.jpg",
+        "trailer": "./dict/assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
+        "description": "./dict/assets/videogames/hollowKnightDescription.txt"
     },
     {
         "name": "Hollow Knight",
@@ -76,11 +76,11 @@
         "timeToComplete": "23",
         "skillLevel": "4/5",
         "developmentDays": "23",
-        "gameplayImg": "../assets/videogames/hollowKnightGameplay.jpg",
-        "coverImg": "../assets/videogames/hollowKnightCover.jpg",
-        "trailer": "../assets/videogames/HollowKnightTrailer.mp4",
+        "gameplayImg": "./dict/assets/videogames/hollowKnightGameplay.jpg",
+        "coverImg": "./dict/assets/videogames/hollowKnightCover.jpg",
+        "trailer": "./dict/assets/videogames/HollowKnightTrailer.mp4",
         "devDiaryLink": "asdsd",
         "itchLink": "https://www.google.com",
-        "description": "../assets/videogames/hollowKnightDescription.txt"
+        "description": "./dict/assets/videogames/hollowKnightDescription.txt"
     }
 ]

@@ -121,21 +121,21 @@ export const visible = "visible"
 export const hidden = "invisible"
 
 // # ICONS
-import logo from "/assets/icons/logo.svg";
-import musicIcon from "/assets/icons/sectionMusic.svg";
-import musicPlay from "/assets/icons/musicPlay.svg";
-import musicPause from "/assets/icons/musicPause.svg";
-import illustrationIcon from "/assets/icons/sectionIllustration.svg";
-import videogameIcon from "/assets/icons/sectionVideogames.svg";
-import otherIcon from "/assets/icons/sectionOthers.svg";
-import art3dIcon from "/assets/icons/section3DArt.svg";
-import searchIcon from "/assets/icons/search.svg"
+import logo from "./dist/assets/icons/logo.svg";
+import musicIcon from "./dist/assets/icons/sectionMusic.svg";
+import musicPlay from "./dist/assets/icons/musicPlay.svg";
+import musicPause from "./dist/assets/icons/musicPause.svg";
+import illustrationIcon from "./dist/assets/icons/sectionIllustration.svg";
+import videogameIcon from "./dist/assets/icons/sectionVideogames.svg";
+import otherIcon from "./dist/assets/icons/sectionOthers.svg";
+import art3dIcon from "./dist/assets/icons/section3DArt.svg";
+import searchIcon from "./dist/assets/icons/search.svg"
 
-const videogameDictPath = "/assets/videogames/videogameDict.json"
-const musicDictPath = "/assets/music/musicDict.json"
-const otherDictPath = "/assets/other/otherDict.json"
-const illustrationDictPath = "/assets/illustration/illustrationDict.json"
-const art3dDictPath = "/assets/art3D/art3dDict.json"
+const videogameDictPath = "./dist/assets/videogames/videogameDict.json"
+const musicDictPath = "./dist/assets/music/musicDict.json"
+const otherDictPath = "./dist/assets/other/otherDict.json"
+const illustrationDictPath = "./dist/assets/illustration/illustrationDict.json"
+const art3dDictPath = "./dist/assets/art3D/art3dDict.json"
 
 
 export {
