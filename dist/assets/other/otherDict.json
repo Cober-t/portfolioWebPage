@@ -1,65 +1,65 @@
 [
     {
         "key": 0,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 1,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 2,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 3,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 4,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 5,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 6,
-        "previewImg": "./dict/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "./dict/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "./dict/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "./dict/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     }
 ]

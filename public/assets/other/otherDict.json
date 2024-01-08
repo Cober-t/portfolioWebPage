@@ -1,65 +1,65 @@
 [
     {
         "key": 0,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 1,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 2,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 3,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 4,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 5,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     },
     {
         "key": 6,
-        "previewImg": "/assets/other/kirbyPreviewImg.jpg",
-        "headerImg": "/assets/other/kirbyHeaderImg.jpg",
+        "previewImg": "./assets/other/kirbyPreviewImg.jpg",
+        "headerImg": "./assets/other/kirbyHeaderImg.jpg",
         "date": "26 SEPTIEMBRE 2023",
         "tags": "#baldurs-gate-iii, #articulos",
-        "galleryText": "/assets/other/kirbyGalleryEntry.txt",
-        "articleText": "/assets/other/kirbyArticleText.txt"
+        "galleryText": "./assets/other/kirbyGalleryEntry.txt",
+        "articleText": "./assets/other/kirbyArticleText.txt"
     }
 ]

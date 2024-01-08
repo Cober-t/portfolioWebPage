@@ -1,32 +1,32 @@
 [
     {
         "name": "While my guitar gently weeps",
-        "coverImg": "./dict/assets/music/html.png",
-        "description": "./dict/assets/music/songDescription.txt",
-        "path": "./dict/assets/music/testSong.mp3"
+        "coverImg": "./assets/music/html.png",
+        "description": "./assets/music/songDescription.txt",
+        "path": "./assets/music/testSong.mp3"
     },
     {
         "name": "Rock DJ",
-        "coverImg": "./dict/assets/music/html.png",
-        "description": "./dict/assets/music/songDescription.txt",
-        "path": "./dict/assets/music/testSong.mp3"
+        "coverImg": "./assets/music/html.png",
+        "description": "./assets/music/songDescription.txt",
+        "path": "./assets/music/testSong.mp3"
     },
     {
         "name": "Since I've been loving you",
-        "coverImg": "./dict/assets/music/html.png",
-        "description": "./dict/assets/music/songDescription.txt",
-        "path": "./dict/assets/music/testSong.mp3"
+        "coverImg": "./assets/music/html.png",
+        "description": "./assets/music/songDescription.txt",
+        "path": "./assets/music/testSong.mp3"
     },
     {
         "name": "Get lucky",
-        "coverImg": "./dict/assets/music/html.png",
-        "description": "./dict/assets/music/songDescription.txt",
-        "path": "./dict/assets/music/testSong.mp3"
+        "coverImg": "./assets/music/html.png",
+        "description": "./assets/music/songDescription.txt",
+        "path": "./assets/music/testSong.mp3"
     },
     {
         "name": "Heart beat",
-        "coverImg": "./dict/assets/music/html.png",
-        "description": "./dict/assets/music/songDescription.txt",
-        "path": "./dict/assets/music/testSong.mp3"
+        "coverImg": "./assets/music/html.png",
+        "description": "./assets/music/songDescription.txt",
+        "path": "./assets/music/testSong.mp3"
     }
 ]

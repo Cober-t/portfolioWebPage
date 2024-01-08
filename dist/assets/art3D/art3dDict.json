@@ -1,44 +1,44 @@
 [
     {
-        "previewImg": "./dict/assets/art3D/Figure1.png",
+        "previewImg": "./assets/art3D/Figure1.png",
         "date": "26/10/2023",
         "title": "Lapras",
         "num": "01",
-        "description": "./dict/assets/art3D/description.txt"
+        "description": "./assets/art3D/description.txt"
     },
     {
-        "previewImg": "./dict/assets/art3D/Figure2.png",
+        "previewImg": "./assets/art3D/Figure2.png",
         "date": "26/10/2023",
         "title": "Garchomp",
         "num": "02",
-        "description": "./dict/assets/art3D/description.txt"
+        "description": "./assets/art3D/description.txt"
     },
     {
-        "previewImg": "./dict/assets/art3D/Figure3.png",
+        "previewImg": "./assets/art3D/Figure3.png",
         "date": "26/10/2023",
         "title": "FLYGON",
         "num": "03",
-        "description": "./dict/assets/art3D/description.txt"
+        "description": "./assets/art3D/description.txt"
     },
     {
-        "previewImg": "./dict/assets/art3D/Figure2.png",
+        "previewImg": "./assets/art3D/Figure2.png",
         "date": "26/10/2023",
         "title": "Garchomp",
         "num": "04",
-        "description": "./dict/assets/art3D/description.txt"
+        "description": "./assets/art3D/description.txt"
     },
     {
-        "previewImg": "./dict/assets/art3D/Figure1.png",
+        "previewImg": "./assets/art3D/Figure1.png",
         "date": "26/10/2023",
         "title": "Lapras",
         "num": "05",
-        "description": "./dict/assets/art3D/description.txt"
+        "description": "./assets/art3D/description.txt"
     },
     {
-        "previewImg": "./dict/assets/art3D/Figure3.png",
+        "previewImg": "./assets/art3D/Figure3.png",
         "date": "26/10/2023",
         "title": "FLYGON",
         "num": "06",
-        "description": "./dict/assets/art3D/description.txt"
+        "description": "./assets/art3D/description.txt"
     }
 ]
