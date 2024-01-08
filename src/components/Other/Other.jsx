@@ -4,6 +4,7 @@ import ArticleGallery from './ArticleGallery'
 import ArticlePreviewTemplate from './ArticlePreviewTemplate'
 
 
+
 const Other = ({data}) => {
 
 	const [galleryView, setGalleryView] = useState("hidden")
@@ -52,7 +53,7 @@ const Other = ({data}) => {
 				</div>
 
 				<div className="justify-center items-center w-full overflow-y-scroll overflow-x-scroll no-scrollbar
-					xs:columns-1 md:columns-2 lg:columns-3 break-inside-avoid-page px-5">
+					grid grid-flow-row xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5">
 
 						{data && data.map((otherItem) => 
 							<li key={otherItem.key} className='list-none'>
