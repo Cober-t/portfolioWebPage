@@ -47,7 +47,7 @@ function SectionWrapper(Component, path) {
                 <div className={`relative z-0 bg-backgroundColor overflow-none`}>
                     <Navbar/>
                     <Component data={data}/>
-                    <Transition />
+                    {/* <Transition /> */}
                     
                 </div>
             // </Suspense>

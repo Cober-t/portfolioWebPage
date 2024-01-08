@@ -41,9 +41,9 @@ const Transition = () => {
 function HomeWrapper(Component) {
 
     return (
-        <Suspense fallback={<Transition/>}>
+        // <Suspense fallback={<Transition/>}>
             <Component/>
-        </Suspense>
+        // </Suspense>
     )
 }
 

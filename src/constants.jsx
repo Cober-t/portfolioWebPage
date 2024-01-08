@@ -1,4 +1,4 @@
-import { useMatch, useLocation, useResolvedPath, Link } from 'react-router-dom';
+import { useMatch, useResolvedPath, Link } from 'react-router-dom';
 import { useProgress } from '@react-three/drei';
 
 
@@ -16,31 +16,6 @@ export function CustomLink({ to, uniqueKey, children, ...props }) {
     )
 }
 
-export function DrawCurrentIcon({object}) {
-
-    const location = useLocation()
-
-    if ( object.id === location.pathname ) 
-        return (
-            <CustomLink to={`${object.id}`} 
-                onClick={() => { window.scroll(0, 0); setActive("hidden"); }}
-            >
-                <img src={object.icon} alt="logo"/>
-            </CustomLink>
-        )
-}
-
-export function DrawNameSection({object}) {
-
-    const location = useLocation()
-
-    if ( object.id == location.pathname)
-        return (
-            <div className={`${object.color} xs:text-[32px] sm:text-[32px] md:text-[32px] uppercase tracking-wider text-black-100`}> 
-                {object.title}
-            </div>
-        )
-}
 
 const style= "select-none xs:pl-6 md:pl-[50px] xs:text-[48px] md:text-[62px] uppercase text-black-100"
 export const navLinks = [
@@ -121,21 +96,21 @@ export const visible = "visible"
 export const hidden = "invisible"
 
 // # ICONS
-import logo from "./assets/icons/logo.svg";
-import musicIcon from "./assets/icons/sectionMusic.svg";
-import musicPlay from "./assets/icons/musicPlay.svg";
-import musicPause from "./assets/icons/musicPause.svg";
-import illustrationIcon from "./assets/icons/sectionIllustration.svg";
-import videogameIcon from "./assets/icons/sectionVideogames.svg";
-import otherIcon from "./assets/icons/sectionOthers.svg";
-import art3dIcon from "./assets/icons/section3DArt.svg";
-import searchIcon from "./assets/icons/search.svg"
+import logo from "/assets/icons/logo.svg";
+import musicIcon from "/assets/icons/sectionMusic.svg";
+import musicPlay from "/assets/icons/musicPlay.svg";
+import musicPause from "/assets/icons/musicPause.svg";
+import illustrationIcon from "/assets/icons/sectionIllustration.svg";
+import videogameIcon from "/assets/icons/sectionVideogames.svg";
+import otherIcon from "/assets/icons/sectionOthers.svg";
+import art3dIcon from "/assets/icons/section3DArt.svg";
+import searchIcon from "/assets/icons/search.svg"
 
-const videogameDictPath = "./assets/videogames/videogameDict.json"
-const musicDictPath = "./assets/music/musicDict.json"
-const otherDictPath = "./assets/other/otherDict.json"
-const illustrationDictPath = "./assets/illustration/illustrationDict.json"
-const art3dDictPath = "./assets/art3D/art3dDict.json"
+const videogameDictPath = "/assets/videogames/videogameDict.json"
+const musicDictPath = "/assets/music/musicDict.json"
+const otherDictPath = "/assets/other/otherDict.json"
+const illustrationDictPath = "/assets/illustration/illustrationDict.json"
+const art3dDictPath = "/assets/art3D/art3dDict.json"
 
 
 export {
